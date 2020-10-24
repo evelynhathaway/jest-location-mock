@@ -1,0 +1,18 @@
+# Node
+node_modules
+
+# IDE
+\.idea/
+\.vscode/
+
+# Built files
+/lib
+
+# Testing
+/coverage
+
+# Other
+.cache
+/*.log
+*.lock
+.DS_Store
