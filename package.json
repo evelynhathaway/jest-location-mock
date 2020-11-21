@@ -1,6 +1,7 @@
 {
 	"name": "jest-location-mock",
 	"version": "0.1.0",
+	"sideEffects": true,
 	"description": "Jest hooks for JSDOM location mock",
 	"keywords": [
 		"jest",
@@ -43,5 +44,10 @@
 	},
 	"engines": {
 		"node": "^10.0.0"
+	},
+	"dependencies": {
+		"escape-string-regexp": "^1.0.5",
+		"expect": "^26.6.1",
+		"jest-diff": "^26.6.1"
 	}
 }

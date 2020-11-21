@@ -7,7 +7,6 @@
 			"esnext"
 		],
 		"strict": true,
-		"isolatedModules": true,
 		"esModuleInterop": true,
 		"outDir": "lib",
 		"moduleResolution": "node",
@@ -16,6 +15,7 @@
 	},
 	"include": [
 		"src",
+		"config",
 	],
 	"exclude": [
 		"node_modules",
