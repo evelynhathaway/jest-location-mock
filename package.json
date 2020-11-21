@@ -9,7 +9,7 @@
 	],
 	"homepage": "https://github.com/evelynhathaway/jest-location-mock#readme",
 	"bugs": {
-		"url": "https://github.com/evelynhathaway/boilerplate/issues"
+		"url": "https://github.com/evelynhathaway/jest-location-mock/issues"
 	},
 	"repository": {
 		"type": "git",
@@ -78,7 +78,7 @@
 		"typescript": "^4.1.2"
 	},
 	"engines": {
-		"node": "^10.0.0"
+		"node": ">=10.0.0"
 	},
 	"release": {
 		"extends": "conventional-changelog-evelyn/release.config.js"
