@@ -1,0 +1,23 @@
+{
+	"compilerOptions": {
+		"module": "esnext",
+		"target": "es6",
+		"lib": [
+			"dom",
+			"esnext"
+		],
+		"strict": true,
+		"esModuleInterop": true,
+		"outDir": "lib",
+		"moduleResolution": "node",
+		"declaration": true,
+	},
+	"include": [
+		"src",
+		"config",
+	],
+	"exclude": [
+		"node_modules",
+		"lib",
+	],
+}
