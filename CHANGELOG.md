@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.0.1
+
+**[`v1.0.0...v1.0.1`](https://github.com/evelynhathaway/jest-location-mock/compare/v1.0.0...v1.0.1)** - **2020-11-21**
+
+### 🐛 Fix
+
+- Update package.json engines [`c3e380c`](https://github.com/evelynhathaway/jest-location-mock/commit/c3e380c)
+
 ## v1.0.0
 
 **2020-11-21**
