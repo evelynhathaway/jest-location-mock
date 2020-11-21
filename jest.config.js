@@ -19,5 +19,8 @@ module.exports = {
 		},
 	},
 	testEnvironment: "jsdom",
+	setupFilesAfterEnv: [
+		"./config/jest-setup.ts",
+	],
 	verbose: true,
 };
