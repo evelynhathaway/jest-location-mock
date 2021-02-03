@@ -1,6 +1,6 @@
 {
 	"compilerOptions": {
-		"module": "esnext",
+		"module": "CommonJS",
 		"target": "es6",
 		"lib": [
 			"dom",
@@ -15,6 +15,7 @@
 	"include": [
 		"src",
 		"config",
+		"jest.d.ts",
 	],
 	"exclude": [
 		"node_modules",
