@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.0.4
+
+**[`v1.0.3...v1.0.4`](https://github.com/evelynhathaway/jest-location-mock/compare/v1.0.3...v1.0.4)** - **2021-05-17**
+
+### 📦 Package
+
+- **npm:** Bump eslint-plugin-testing-library from 3.10.2 to 4.4.0 [`eb01e94`](https://github.com/evelynhathaway/jest-location-mock/commit/eb01e94)
+
 ## v1.0.3
 
 **[`v1.0.2...v1.0.3`](https://github.com/evelynhathaway/jest-location-mock/compare/v1.0.2...v1.0.3)** - **2021-05-17**
