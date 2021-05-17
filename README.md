@@ -7,7 +7,7 @@
 **Jest hooks for JSDOM location mock**
 
 [![npm version](https://badgen.net/npm/v/jest-location-mock?icon=npm)](https://www.npmjs.com/package/jest-location-mock)
-[![check status](https://badgen.net/github/checks/evelynhathaway/loose-rgb/master?icon=github)](https://github.com/evelynhathaway/loose-rgb/actions)
+[![check status](https://badgen.net/github/checks/evelynhathaway/jest-location-mock/main?icon=github)](https://github.com/evelynhathaway/jest-location-mock/actions)
 [![license: MIT](https://badgen.net/badge/license/MIT/blue)](/LICENSE)
 
 </div>
