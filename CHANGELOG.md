@@ -1,5 +1,19 @@
 # Changelog
 
+## v1.0.3
+
+**[`v1.0.2...v1.0.3`](https://github.com/evelynhathaway/jest-location-mock/compare/v1.0.2...v1.0.3)** - **2021-05-17**
+
+### 📦 Package
+
+- **npm:** Update release config [`68be1d3`](https://github.com/evelynhathaway/jest-location-mock/commit/68be1d3)
+- npm update [`5a9b188`](https://github.com/evelynhathaway/jest-location-mock/commit/5a9b188)
+
+### Other
+
+- Update GitHub Action workflow [`9852b4c`](https://github.com/evelynhathaway/jest-location-mock/commit/9852b4c)
+- Update GitHub Actions workflow [`36735d0`](https://github.com/evelynhathaway/jest-location-mock/commit/36735d0)
+
 ## v1.0.2
 
 **[`v1.0.1...v1.0.2`](https://github.com/evelynhathaway/jest-location-mock/compare/v1.0.1...v1.0.2)** - **2021-02-03**
