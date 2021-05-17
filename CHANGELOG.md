@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.0.6
+
+**[`v1.0.5...v1.0.6`](https://github.com/evelynhathaway/jest-location-mock/compare/v1.0.5...v1.0.6)** - **2021-05-17**
+
+### 📄 Documentation
+
+- **readme:** Update badges [`e0e4c56`](https://github.com/evelynhathaway/jest-location-mock/commit/e0e4c56)
+
 ## v1.0.5
 
 **[`v1.0.4...v1.0.5`](https://github.com/evelynhathaway/jest-location-mock/compare/v1.0.4...v1.0.5)** - **2021-05-17**
