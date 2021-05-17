@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.0.5
+
+**[`v1.0.4...v1.0.5`](https://github.com/evelynhathaway/jest-location-mock/compare/v1.0.4...v1.0.5)** - **2021-05-17**
+
+### 📦 Package
+
+- **npm:** Bump node-notifier from 8.0.0 to 8.0.2 [`e783967`](https://github.com/evelynhathaway/jest-location-mock/commit/e783967)
+
+### Other
+
+- **test:** Add wallaby config file [`e1c60fe`](https://github.com/evelynhathaway/jest-location-mock/commit/e1c60fe)
+
 ## v1.0.4
 
 **[`v1.0.3...v1.0.4`](https://github.com/evelynhathaway/jest-location-mock/compare/v1.0.3...v1.0.4)** - **2021-05-17**
