@@ -1,0 +1,73 @@
+{
+	"heading-increment": true,
+	"no-hard-tabs": false,
+	"first-line-heading": false,
+	"heading-style": {
+		"style": "atx"
+	},
+	"ul-style": {
+		"style": "dash"
+	},
+	"list-indent": true,
+	"ul-indent": {
+		"indent": 4,
+		"start_indented": false
+	},
+	"no-trailing-spaces": {
+		"strict": true,
+		"br_spaces": 2
+	},
+	"no-reversed-links": true,
+	"no-inline-html": false,
+	"no-emphasis-as-heading": false,
+	"no-multiple-blanks": {
+		"maximum": 2
+	},
+	"line-length": false,
+	"commands-show-output": true,
+	"no-missing-space-atx": true,
+	"no-multiple-space-atx": true,
+	"blanks-around-headings": true,
+	"heading-start-left": true,
+	"no-duplicate-heading": {
+		"siblings_only": true
+	},
+	"single-title": true,
+	"no-trailing-punctuation": true,
+	"no-multiple-space-blockquote": true,
+	"no-blanks-blockquote": true,
+	"ol-prefix": {
+		"style": "one_or_ordered"
+	},
+	"list-marker-space": true,
+	"blanks-around-fences": {
+		"list_items": false
+	},
+	"blanks-around-lists": true,
+	"no-bare-urls": true,
+	"hr-style": {
+		"style": "---"
+	},
+	"no-space-in-emphasis": true,
+	"no-space-in-code": true,
+	"no-space-in-links": true,
+	"fenced-code-language": true,
+	"no-empty-links": true,
+	"proper-names": {
+		"names": [
+			"JavaScript",
+			"TypeScript",
+			"npm",
+			"Node.js",
+			"GitHub"
+		]
+	},
+	"no-alt-text": true,
+	"code-block-style": {
+		"style": "fenced"
+	},
+	"single-trailing-newline": true,
+	"code-fence-style": {
+		"style": "backtick"
+	}
+}

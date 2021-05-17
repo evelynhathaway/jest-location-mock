@@ -58,7 +58,7 @@
 		"@typescript-eslint/eslint-plugin": "^4.23.0",
 		"@typescript-eslint/parser": "^4.23.0",
 		"commitlint": "^12.1.4",
-		"conventional-changelog-evelyn": "^1.2.1",
+		"conventional-changelog-evelyn": "^1.2.2",
 		"eslint": "^7.26.0",
 		"eslint-plugin-evelyn": "^4.0.0",
 		"eslint-plugin-import": "^2.23.2",

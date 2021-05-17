@@ -1,0 +1,39 @@
+{
+	"editor.formatOnSave": true,
+	"eslint.format.enable": true,
+	"eslint.lintTask.enable": true,
+	"files.associations": {
+		".env": "shellscript",
+		".env.*": "shellscript",
+	},
+	"files.eol": "\n",
+	"files.insertFinalNewline": true,
+	"files.trimFinalNewlines": true,
+	"files.trimTrailingWhitespace": true,
+	"html.format.wrapAttributes": "force-expand-multiline",
+	"javascript.format.insertSpaceAfterConstructor": true,
+	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+	"javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+	"javascript.format.semicolons": "insert",
+	"javascript.preferences.importModuleSpecifierEnding": "minimal",
+	"javascript.preferences.quoteStyle": "double",
+	"typescript.format.insertSpaceAfterConstructor": true,
+	"typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+	"typescript.format.insertSpaceAfterTypeAssertion": true,
+	"typescript.format.insertSpaceBeforeFunctionParenthesis": true,
+	"typescript.format.semicolons": "insert",
+	"typescript.tsdk": "node_modules\\typescript\\lib",
+	"versionlens.suggestions.showOnStartup": true,
+	"[javascript]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+	},
+	"[javascriptreact]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+	},
+}

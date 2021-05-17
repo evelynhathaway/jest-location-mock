@@ -1,0 +1,10 @@
+{
+	"recommendations": [
+		"streetsidesoftware.code-spell-checker",
+		"dbaeumer.vscode-eslint",
+		"davidanson.vscode-markdownlint",
+		"pflannery.vscode-versionlens",
+		"wallabyjs.wallaby-vscode",
+		"redhat.vscode-yaml",
+	],
+}
