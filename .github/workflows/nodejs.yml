@@ -16,7 +16,7 @@ jobs:
 
     # From: https://help.github.com/en/actions/configuring-and-managing-workflows/caching-dependencies-to-speed-up-workflows#example-using-the-cache-action
     - name: Cache node modules
-      uses: actions/cache@v1
+      uses: actions/cache@v2
       env:
         cache-name: cache-node-modules
       with:
@@ -26,17 +26,21 @@ jobs:
           ${{ runner.os }}-build-${{ env.cache-name }}-
           ${{ runner.os }}-build-
           ${{ runner.os }}-
+
     - name: Install Dependencies
       run: npm ci
+
     - name: Lint
       run: npm run lint
+
     - name: Test
       run: npm test
+
     - name: Build
       run: npm run build
 
   release:
-    if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/main'
     needs: testing
     runs-on: ubuntu-latest
     env:
@@ -50,7 +54,7 @@ jobs:
 
     # From: https://help.github.com/en/actions/configuring-and-managing-workflows/caching-dependencies-to-speed-up-workflows#example-using-the-cache-action
     - name: Cache node modules
-      uses: actions/cache@v1
+      uses: actions/cache@v2
       env:
         cache-name: cache-node-modules
       with:
