@@ -27,5 +27,13 @@ module.exports = {
 				"@typescript-eslint/unbound-method": "off",
 			},
 		},
+		{
+			"files": [
+				"./*.js",
+			],
+			"rules": {
+				"unicorn/prefer-module": "off",
+			},
+		},
 	],
 };
