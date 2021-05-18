@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.0.7
+
+**[`v1.0.6...v1.0.7`](https://github.com/evelynhathaway/jest-location-mock/compare/v1.0.6...v1.0.7)** - **2021-05-18**
+
+### 📦 Package
+
+- **npm:** Bump @typescript-eslint/eslint-plugin [`3bc0303`](https://github.com/evelynhathaway/jest-location-mock/commit/3bc0303)
+- **npm:** Bump @typescript-eslint/parser from 4.23.0 to 4.24.0 [`88a6287`](https://github.com/evelynhathaway/jest-location-mock/commit/88a6287)
+- **npm:** Bump conventional-changelog-evelyn from 1.2.2 to 1.2.3 [`96b4eab`](https://github.com/evelynhathaway/jest-location-mock/commit/96b4eab)
+
 ## v1.0.6
 
 **[`v1.0.5...v1.0.6`](https://github.com/evelynhathaway/jest-location-mock/compare/v1.0.5...v1.0.6)** - **2021-05-17**

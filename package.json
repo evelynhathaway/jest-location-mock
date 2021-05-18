@@ -1,6 +1,6 @@
 {
 	"name": "jest-location-mock",
-	"version": "1.0.6",
+	"version": "1.0.7",
 	"description": "Jest hooks for JSDOM location mock",
 	"keywords": [
 		"jest",
