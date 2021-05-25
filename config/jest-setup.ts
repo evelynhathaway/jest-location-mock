@@ -1,2 +1,2 @@
 // Default setup side-effects
-import "../src/";
+import "../src";
