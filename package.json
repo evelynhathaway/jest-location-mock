@@ -61,7 +61,7 @@
 		"eslint-plugin-testing-library": "^4.6.0",
 		"eslint-plugin-unicorn": "^32.0.1",
 		"husky": "^6.0.0",
-		"jest": "^26.6.3",
+		"jest": "^27.0.1",
 		"lint-staged": "^11.0.0",
 		"semantic-release": "^17.4.3",
 		"sort-package-json": "^1.50.0",
