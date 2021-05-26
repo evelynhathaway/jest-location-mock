@@ -5,7 +5,7 @@ updates:
     schedule:
       interval: "daily"
     commit-message:
-      prefix: "Upgrade(npm):"
+      prefix: "Upgrade(prod):"
       prefix-development: "Upgrade(dev):"
     reviewers:
       - "evelynhathaway"
