@@ -1,5 +1,24 @@
 # Changelog
 
+## v1.0.8
+
+**[`v1.0.7...v1.0.8`](https://github.com/evelynhathaway/jest-location-mock/compare/v1.0.7...v1.0.8)** - **2021-05-26**
+
+### 🧹 Internal
+
+- Change dependabot config [`8380021`](https://github.com/evelynhathaway/jest-location-mock/commit/8380021)
+
+### Other
+
+- **dev:** Bump eslint from 7.26.0 to 7.27.0 ([#13](https://github.com/evelynhathaway/jest-location-mock/issues/13)) [`7a85a45`](https://github.com/evelynhathaway/jest-location-mock/commit/7a85a45)
+- **dev:** Bump eslint-plugin-evelyn from 6.1.0 to 6.2.0 ([#17](https://github.com/evelynhathaway/jest-location-mock/issues/17)) [`c7c8adf`](https://github.com/evelynhathaway/jest-location-mock/commit/c7c8adf)
+- **dev:** Bump eslint-plugin-import from 2.23.2 to 2.23.3 ([#16](https://github.com/evelynhathaway/jest-location-mock/issues/16)) [`ec7e79c`](https://github.com/evelynhathaway/jest-location-mock/commit/ec7e79c)
+- **dev:** Bump eslint-plugin-testing-library from 4.5.0 to 4.6.0 ([#14](https://github.com/evelynhathaway/jest-location-mock/issues/14)) [`cb369fe`](https://github.com/evelynhathaway/jest-location-mock/commit/cb369fe)
+- **dev:** npm update [`b1f9faf`](https://github.com/evelynhathaway/jest-location-mock/commit/b1f9faf)
+- **dev:** npm update linting plugins [`121e955`](https://github.com/evelynhathaway/jest-location-mock/commit/121e955)
+- **dev:** npm update, linting [`3dbec04`](https://github.com/evelynhathaway/jest-location-mock/commit/3dbec04)
+- **prod:** Bump jest deps to v27 [`42ce4c2`](https://github.com/evelynhathaway/jest-location-mock/commit/42ce4c2)
+
 ## v1.0.7
 
 **[`v1.0.6...v1.0.7`](https://github.com/evelynhathaway/jest-location-mock/compare/v1.0.6...v1.0.7)** - **2021-05-18**
