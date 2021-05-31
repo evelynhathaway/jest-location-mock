@@ -1,5 +1,24 @@
 # Changelog
 
+## v1.0.9
+
+**[`v1.0.8...v1.0.9`](https://github.com/evelynhathaway/jest-location-mock/compare/v1.0.8...v1.0.9)** - **2021-05-31**
+
+### 📦 Package
+
+- **dev:** Bump eslint-plugin-evelyn from 6.2.0 to 6.2.1 [`289f772`](https://github.com/evelynhathaway/jest-location-mock/commit/289f772)
+- **dev:** Bump eslint-plugin-import from 2.23.3 to 2.23.4 [`6cc5c74`](https://github.com/evelynhathaway/jest-location-mock/commit/6cc5c74)
+- **dev:** Bump eslint-plugin-regexp from 0.10.0 to 0.11.0 [`33140e6`](https://github.com/evelynhathaway/jest-location-mock/commit/33140e6)
+- **dev:** Bump jest from 27.0.1 to 27.0.3 [`4c9456b`](https://github.com/evelynhathaway/jest-location-mock/commit/4c9456b)
+- **dev:** Bump ts-jest from 27.0.0 to 27.0.1 [`bb9fac7`](https://github.com/evelynhathaway/jest-location-mock/commit/bb9fac7)
+- **dev:** Bump ts-jest from 27.0.1 to 27.0.2 [`7f5b322`](https://github.com/evelynhathaway/jest-location-mock/commit/7f5b322)
+- **dev:** Update conventional changelog config [`e0cd208`](https://github.com/evelynhathaway/jest-location-mock/commit/e0cd208)
+- **prod:** Bump jest-diff from 27.0.1 to 27.0.2 [`b0a1668`](https://github.com/evelynhathaway/jest-location-mock/commit/b0a1668)
+
+### 🧹 Internal
+
+- Fix unsorted changelog release [`86167c7`](https://github.com/evelynhathaway/jest-location-mock/commit/86167c7)
+
 ## v1.0.8
 
 **[`v1.0.7...v1.0.8`](https://github.com/evelynhathaway/jest-location-mock/compare/v1.0.7...v1.0.8)** - **2021-05-26**
