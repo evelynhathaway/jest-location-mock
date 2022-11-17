@@ -2,6 +2,10 @@ import {LocationMockRelative} from "../utils";
 
 
 export const replaceLocation = (): void => {
+	// do nothing if window is not defined
+	if (typeof window === 'undefined') {
+		return;
+	}
 	// Set the base URL for relative URLs to `HOST` environment variable, defaults to localhost
 	const locationMock = new LocationMockRelative(process.env.HOST || "http://localhost/");
 
