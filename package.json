@@ -60,7 +60,7 @@
 		"eslint-plugin-regexp": "^0.13.2",
 		"eslint-plugin-testing-library": "^4.6.0",
 		"eslint-plugin-unicorn": "^32.0.1",
-		"husky": "^6.0.0",
+		"husky": "^8.0.3",
 		"jest": "^27.0.1",
 		"lint-staged": "^11.0.0",
 		"semantic-release": "^17.4.3",
