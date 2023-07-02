@@ -2,6 +2,11 @@ import {LocationMockRelative} from "../utils";
 
 
 export const replaceLocation = (): void => {
+	// Do nothing if window is not defined
+	// - Prevents an error when importing this mock in the setup file when some tests use the node test environment instead of JSDOM
+	if (typeof window === "undefined") {
+		return;
+	}
 	// Set the base URL for relative URLs to `HOST` environment variable, defaults to localhost
 	const locationMock = new LocationMockRelative(process.env.HOST || "http://localhost/");
 
