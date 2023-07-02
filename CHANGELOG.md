@@ -1,5 +1,73 @@
 # Changelog
 
+## v1.0.10
+
+**[`v1.0.9...v1.0.10`](https://github.com/evelynhathaway/jest-location-mock/compare/v1.0.9...v1.0.10)** - **2023-07-02**
+
+### 🐛 Fix
+
+- Handle undefined window by returning silently [`daa0c6e`](https://github.com/evelynhathaway/jest-location-mock/commit/daa0c6e)
+
+### 📦 Package
+
+- **dev:** Bump @semantic-release/git from 9.0.0 to 9.0.1 [`8c55a37`](https://github.com/evelynhathaway/jest-location-mock/commit/8c55a37)
+- **dev:** Bump @types/jest from 26.0.23 to 26.0.24 [`f95bfcc`](https://github.com/evelynhathaway/jest-location-mock/commit/f95bfcc)
+- **dev:** Bump @types/jest from 26.0.24 to 27.0.0 [`c0d5a35`](https://github.com/evelynhathaway/jest-location-mock/commit/c0d5a35)
+- **dev:** Bump @types/jest from 27.0.0 to 27.0.1 [`91b6038`](https://github.com/evelynhathaway/jest-location-mock/commit/91b6038)
+- **dev:** Bump @typescript-eslint/eslint-plugin [`f327db2`](https://github.com/evelynhathaway/jest-location-mock/commit/f327db2)
+- **dev:** Bump @typescript-eslint/eslint-plugin [`452d5be`](https://github.com/evelynhathaway/jest-location-mock/commit/452d5be)
+- **dev:** Bump @typescript-eslint/eslint-plugin [`ad95aa2`](https://github.com/evelynhathaway/jest-location-mock/commit/ad95aa2)
+- **dev:** Bump @typescript-eslint/eslint-plugin [`f79d00c`](https://github.com/evelynhathaway/jest-location-mock/commit/f79d00c)
+- **dev:** Bump @typescript-eslint/eslint-plugin [`45f62d8`](https://github.com/evelynhathaway/jest-location-mock/commit/45f62d8)
+- **dev:** Bump @typescript-eslint/eslint-plugin [`d409d19`](https://github.com/evelynhathaway/jest-location-mock/commit/d409d19)
+- **dev:** Bump @typescript-eslint/eslint-plugin [`14a1d04`](https://github.com/evelynhathaway/jest-location-mock/commit/14a1d04)
+- **dev:** Bump @typescript-eslint/eslint-plugin [`8a5feb4`](https://github.com/evelynhathaway/jest-location-mock/commit/8a5feb4)
+- **dev:** Bump @typescript-eslint/eslint-plugin [`e11a658`](https://github.com/evelynhathaway/jest-location-mock/commit/e11a658)
+- **dev:** Bump @typescript-eslint/eslint-plugin [`43e9626`](https://github.com/evelynhathaway/jest-location-mock/commit/43e9626)
+- **dev:** Bump @typescript-eslint/parser from 4.25.0 to 4.26.0 [`b6c207a`](https://github.com/evelynhathaway/jest-location-mock/commit/b6c207a)
+- **dev:** Bump @typescript-eslint/parser from 4.26.0 to 4.26.1 [`bd0b78d`](https://github.com/evelynhathaway/jest-location-mock/commit/bd0b78d)
+- **dev:** Bump @typescript-eslint/parser from 4.26.1 to 4.28.4 [`6f5376e`](https://github.com/evelynhathaway/jest-location-mock/commit/6f5376e)
+- **dev:** Bump @typescript-eslint/parser from 4.28.4 to 4.29.0 [`10c7591`](https://github.com/evelynhathaway/jest-location-mock/commit/10c7591)
+- **dev:** Bump @typescript-eslint/parser from 4.29.0 to 4.29.1 [`38c5f48`](https://github.com/evelynhathaway/jest-location-mock/commit/38c5f48)
+- **dev:** Bump @typescript-eslint/parser from 4.29.1 to 4.29.2 [`4291b6b`](https://github.com/evelynhathaway/jest-location-mock/commit/4291b6b)
+- **dev:** Bump @typescript-eslint/parser from 4.29.2 to 4.29.3 [`459837f`](https://github.com/evelynhathaway/jest-location-mock/commit/459837f)
+- **dev:** Bump @typescript-eslint/parser from 4.29.3 to 4.31.0 [`59644b6`](https://github.com/evelynhathaway/jest-location-mock/commit/59644b6)
+- **dev:** Bump @typescript-eslint/parser from 4.31.0 to 4.31.1 [`3b6caa3`](https://github.com/evelynhathaway/jest-location-mock/commit/3b6caa3)
+- **dev:** Bump commitlint from 12.1.4 to 13.1.0 [`cd99683`](https://github.com/evelynhathaway/jest-location-mock/commit/cd99683)
+- **dev:** Bump eslint from 7.27.0 to 7.28.0 [`fc4b555`](https://github.com/evelynhathaway/jest-location-mock/commit/fc4b555)
+- **dev:** Bump eslint from 7.28.0 to 7.31.0 [`96c5796`](https://github.com/evelynhathaway/jest-location-mock/commit/96c5796)
+- **dev:** Bump eslint from 7.31.0 to 7.32.0 [`f06bd57`](https://github.com/evelynhathaway/jest-location-mock/commit/f06bd57)
+- **dev:** Bump eslint-plugin-import from 2.23.4 to 2.24.0 [`8bd1ced`](https://github.com/evelynhathaway/jest-location-mock/commit/8bd1ced)
+- **dev:** Bump eslint-plugin-import from 2.24.0 to 2.24.1 [`2a4a678`](https://github.com/evelynhathaway/jest-location-mock/commit/2a4a678)
+- **dev:** Bump eslint-plugin-import from 2.24.1 to 2.24.2 [`d76d0c1`](https://github.com/evelynhathaway/jest-location-mock/commit/d76d0c1)
+- **dev:** Bump eslint-plugin-regexp from 0.11.0 to 0.13.2 [`80e0f54`](https://github.com/evelynhathaway/jest-location-mock/commit/80e0f54)
+- **dev:** Bump eslint-plugin-testing-library from 4.10.1 to 4.11.0 [`c41cdf1`](https://github.com/evelynhathaway/jest-location-mock/commit/c41cdf1)
+- **dev:** Bump eslint-plugin-testing-library from 4.11.0 to 4.12.0 [`128a43a`](https://github.com/evelynhathaway/jest-location-mock/commit/128a43a)
+- **dev:** Bump eslint-plugin-testing-library from 4.12.0 to 4.12.1 [`1a9de20`](https://github.com/evelynhathaway/jest-location-mock/commit/1a9de20)
+- **dev:** Bump eslint-plugin-testing-library from 4.12.1 to 4.12.2 [`0bde84a`](https://github.com/evelynhathaway/jest-location-mock/commit/0bde84a)
+- **dev:** Bump eslint-plugin-testing-library from 4.6.0 to 4.10.1 [`681cff7`](https://github.com/evelynhathaway/jest-location-mock/commit/681cff7)
+- **dev:** Bump jest from 27.0.3 to 27.0.4 [`7a3f257`](https://github.com/evelynhathaway/jest-location-mock/commit/7a3f257)
+- **dev:** Bump jest from 27.0.4 to 27.0.6 [`672a59b`](https://github.com/evelynhathaway/jest-location-mock/commit/672a59b)
+- **dev:** Bump jest from 27.0.6 to 27.1.1 [`16bf2d3`](https://github.com/evelynhathaway/jest-location-mock/commit/16bf2d3)
+- **dev:** Bump jest from 27.1.1 to 27.2.0 [`a264534`](https://github.com/evelynhathaway/jest-location-mock/commit/a264534)
+- **dev:** Bump lint-staged from 11.0.0 to 11.1.1 [`24f483c`](https://github.com/evelynhathaway/jest-location-mock/commit/24f483c)
+- **dev:** Bump lint-staged from 11.1.1 to 11.1.2 [`618385e`](https://github.com/evelynhathaway/jest-location-mock/commit/618385e)
+- **dev:** Bump semantic-release from 17.4.3 to 17.4.4 [`ca4eb0b`](https://github.com/evelynhathaway/jest-location-mock/commit/ca4eb0b)
+- **dev:** Bump semantic-release from 17.4.4 to 17.4.5 [`c76c2e4`](https://github.com/evelynhathaway/jest-location-mock/commit/c76c2e4)
+- **dev:** Bump semantic-release from 17.4.5 to 17.4.6 [`4aebfa5`](https://github.com/evelynhathaway/jest-location-mock/commit/4aebfa5)
+- **dev:** Bump semantic-release from 17.4.6 to 17.4.7 [`062056f`](https://github.com/evelynhathaway/jest-location-mock/commit/062056f)
+- **dev:** Bump sort-package-json from 1.50.0 to 1.51.0 [`93ac06e`](https://github.com/evelynhathaway/jest-location-mock/commit/93ac06e)
+- **dev:** Bump ts-jest from 27.0.2 to 27.0.3 [`7591991`](https://github.com/evelynhathaway/jest-location-mock/commit/7591991)
+- **dev:** Bump ts-jest from 27.0.3 to 27.0.4 [`f69b805`](https://github.com/evelynhathaway/jest-location-mock/commit/f69b805)
+- **dev:** Bump ts-jest from 27.0.4 to 27.0.5 [`a10df76`](https://github.com/evelynhathaway/jest-location-mock/commit/a10df76)
+- **dev:** Bump typescript from 4.3.2 to 4.3.5 [`f11512b`](https://github.com/evelynhathaway/jest-location-mock/commit/f11512b)
+- **dev:** Bump typescript from 4.3.5 to 4.4.2 [`af4a8ec`](https://github.com/evelynhathaway/jest-location-mock/commit/af4a8ec)
+- **dev:** Bump typescript from 4.4.2 to 4.4.3 [`6446303`](https://github.com/evelynhathaway/jest-location-mock/commit/6446303)
+
+### 🧹 Internal
+
+- Add test for Node.js environment, fix lint and meta [`95e04c6`](https://github.com/evelynhathaway/jest-location-mock/commit/95e04c6)
+
 ## v1.0.9
 
 **[`v1.0.8...v1.0.9`](https://github.com/evelynhathaway/jest-location-mock/compare/v1.0.8...v1.0.9)** - **2021-05-31**
