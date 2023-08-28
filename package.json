@@ -46,7 +46,7 @@
 	},
 	"dependencies": {
 		"@jedmao/location": "^3.0.0",
-		"jest-diff": "^27.0.1"
+		"jest-diff": "^29.6.4"
 	},
 	"devDependencies": {
 		"@semantic-release/changelog": "^6.0.3",
