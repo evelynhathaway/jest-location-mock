@@ -1,5 +1,18 @@
 # Changelog
 
+## v2.0.0
+
+**[`v1.0.10...v2.0.0`](https://github.com/evelynhathaway/jest-location-mock/compare/v1.0.10...v2.0.0)** - **2023-09-04**
+
+### 💥 Breaking
+
+- Drop support node 17 and < 16.10.0 [`4512b25`](https://github.com/evelynhathaway/jest-location-mock/commit/4512b25)
+
+### 📦 Package
+
+- **dev:** npm update and npm audit fix [`ab8036d`](https://github.com/evelynhathaway/jest-location-mock/commit/ab8036d)
+- **npm:** Bump jest-diff from 27.2.0 to 29.6.4 [`830895f`](https://github.com/evelynhathaway/jest-location-mock/commit/830895f)
+
 ## v1.0.10
 
 **[`v1.0.9...v1.0.10`](https://github.com/evelynhathaway/jest-location-mock/compare/v1.0.9...v1.0.10)** - **2023-07-02**
