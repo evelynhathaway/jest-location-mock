@@ -16,15 +16,20 @@ export const replaceLocation = (): void => {
 	jest.spyOn(locationMock, "replace").mockName("window.location.replace");
 
 	// Add the property to the Window
-	// - Only some JSDOM versions support `delete` and `set`, so we use `Object.defineProperty`
+	// - Only some JSDOM versions support `delete` and `set`, and the browser allows for a setter to update the location
+	//   so we use `Object.defineProperty`
 	Object.defineProperty(
 		window,
 		"location",
 		{
-			value: locationMock,
+			get () {
+				return locationMock;
+			},
+			set (value: string) {
+				locationMock.href = value;
+			},
 			configurable: true,
 			enumerable: true,
-			writable: true, // Variance from spec, needed for some reason?
 		},
 	);
 };
