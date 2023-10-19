@@ -1,6 +1,5 @@
-// eslint-disable-next-line @typescript-eslint/triple-slash-reference, spaced-comment
+// eslint-disable-next-line @typescript-eslint/triple-slash-reference
 /// <reference path="../jest.d.ts" />
-// eslint-disable-next-line import/namespace
 import * as extensions from "./matchers";
 
 
