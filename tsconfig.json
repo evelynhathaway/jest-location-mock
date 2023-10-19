@@ -11,6 +11,7 @@
 		"outDir": "lib",
 		"moduleResolution": "node",
 		"declaration": true,
+		"jsx": "react"
 	},
 	"include": [
 		"src",

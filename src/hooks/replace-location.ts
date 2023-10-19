@@ -1,5 +1,6 @@
 import {LocationMockRelative} from "../utils";
 
+export const originalLocationRef: {current: Location | null} = {current: null};
 
 export const replaceLocation = (): void => {
 	// Do nothing if window is not defined
@@ -7,6 +8,11 @@ export const replaceLocation = (): void => {
 	if (typeof window === "undefined") {
 		return;
 	}
+
+	if (!originalLocationRef.current) {
+		originalLocationRef.current = window.location;
+	}
+
 	// Set the base URL for relative URLs to `HOST` environment variable, defaults to localhost
 	const locationMock = new LocationMockRelative(process.env.HOST || "http://localhost/");
 
@@ -16,15 +22,20 @@ export const replaceLocation = (): void => {
 	jest.spyOn(locationMock, "replace").mockName("window.location.replace");
 
 	// Add the property to the Window
-	// - Only some JSDOM versions support `delete` and `set`, so we use `Object.defineProperty`
+	// - Only some JSDOM versions support `delete` and `set`, and the browser allows for a setter to update the location
+	//   so we use `Object.defineProperty`
 	Object.defineProperty(
 		window,
 		"location",
 		{
-			value: locationMock,
+			get () {
+				return locationMock;
+			},
+			set (value: string) {
+				locationMock.href = value;
+			},
 			configurable: true,
 			enumerable: true,
-			writable: true, // Variance from spec, needed for some reason?
 		},
 	);
 };
