@@ -14,7 +14,7 @@
 
 ## Description
 
-Ever gotten the following error when using `window.location = newHref`. `window.location.assign()`, `.reload()`, or `.replace()`?
+Ever gotten the following error when using `window.location = newHref`, `window.location.assign()`, `.reload()`, or `.replace()`?
 
 ```txt
 Error: Not implemented: navigation (except hash changes)
@@ -287,7 +287,7 @@ it("should call assign with a relative url", () => {
 
 - **Side effects of updating the location are not implemented** This project expects to be used in a context where side effects are either ignored or handled by the tested code or the router provided by the framework it runs on.
     - JSDOM has limitations with navigation, and if you need a more rigorous test environment for the code you're testing, consider a browser based test technology like Playwright, Cypress, or Puppeteer.
-- **JSDOM has limitations with history traversal**: Navigation, including `window.history` isn't fully implemented in JSDOM. This project aims to improve the behavior of the location API without breaking tests that rely on JSDOM's history API. However, the project currently does not replace their implementation, so any outstanding limitation of JSDOM's `window.history` still applies.
+- **JSDOM has limitations with history traversal**: Navigation, including `window.history`, isn't fully implemented in JSDOM. This project aims to improve the behavior of the location API without breaking tests that rely on JSDOM's history API. However, the project currently does not replace their implementation, so any outstanding limitation of JSDOM's `window.history` still applies.
     - `window.history.back()`, `forward()`, and `go()` will not error, but they will not reflect any history traversal in `window.location` ([jsdom#1565](https://github.com/jsdom/jsdom/issues/1565))
 
 ## License
