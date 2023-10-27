@@ -1,3 +1,4 @@
+import {beforeEach} from "@jest/globals";
 import {replaceLocation} from "./hooks";
 
 
