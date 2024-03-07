@@ -1,3 +1,5 @@
+import {it, expect} from "vitest";
+
 it("should have spy for assign", () => {
 	window.location.assign("/relative-url");
 	expect(window.location.assign).toHaveBeenCalledWith("/relative-url");

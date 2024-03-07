@@ -1,3 +1,4 @@
+import {beforeEach} from "vitest";
 import {replaceLocation} from "./hooks";
 
 

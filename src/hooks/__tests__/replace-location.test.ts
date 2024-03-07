@@ -1,3 +1,5 @@
+import {describe, beforeAll, it, expect} from "vitest";
+
 describe("host environment variable", () => {
 	// Runs before default hooks
 	beforeAll(() => {

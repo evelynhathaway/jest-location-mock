@@ -1,5 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/triple-slash-reference, spaced-comment
-/// <reference path="../jest.d.ts" />
+import {expect} from "vitest";
 // eslint-disable-next-line import/namespace
 import * as extensions from "./matchers";
 
