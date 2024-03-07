@@ -1,7 +1,7 @@
 {
 	"compilerOptions": {
-		"module": "CommonJS",
-		"target": "es6",
+		"module": "ES2022",
+		"target": "ES2022",
 		"lib": [
 			"dom",
 			"esnext"
@@ -9,13 +9,13 @@
 		"strict": true,
 		"esModuleInterop": true,
 		"outDir": "lib",
-		"moduleResolution": "node",
+		"moduleResolution": "Bundler",
 		"declaration": true,
 	},
 	"include": [
 		"src",
 		"config",
-		"jest.d.ts",
+		"vitest.d.ts",
 	],
 	"exclude": [
 		"node_modules",
