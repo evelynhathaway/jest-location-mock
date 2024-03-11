@@ -1,5 +1,5 @@
 import {beforeEach} from "vitest";
-import {replaceLocation} from "./hooks";
+import {replaceLocation} from "./hooks/index.js";
 
 
 // Setup default hooks configuration

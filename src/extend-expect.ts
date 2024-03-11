@@ -1,6 +1,5 @@
 import {expect} from "vitest";
-// eslint-disable-next-line import/namespace
-import * as extensions from "./matchers";
+import * as extensions from "./matchers/index.js";
 
 
 expect.extend(extensions);

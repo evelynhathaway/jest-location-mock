@@ -1,15 +1,14 @@
 {
 	"compilerOptions": {
-		"module": "ES2022",
-		"target": "ES2022",
+		"module": "nodenext",
+		"target": "esnext",
 		"lib": [
 			"dom",
 			"esnext"
 		],
 		"strict": true,
-		"esModuleInterop": true,
 		"outDir": "lib",
-		"moduleResolution": "Bundler",
+		"moduleResolution": "nodenext",
 		"declaration": true,
 	},
 	"include": [

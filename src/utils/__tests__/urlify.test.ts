@@ -1,5 +1,5 @@
 import {it, expect} from "vitest";
-import {urlify} from "..";
+import {urlify} from "../index.js";
 
 
 it("should make strings url instances", () => {

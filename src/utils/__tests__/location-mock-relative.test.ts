@@ -1,5 +1,5 @@
 import {describe, it, expect} from "vitest";
-import {LocationMockRelative} from "..";
+import {LocationMockRelative} from "../index.js";
 
 
 describe("when inputting a relative url", () => {

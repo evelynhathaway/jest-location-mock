@@ -1,2 +1,2 @@
-export * from "./location-mock-relative";
-export * from "./urlify";
+export * from "./location-mock-relative.js";
+export * from "./urlify.js";

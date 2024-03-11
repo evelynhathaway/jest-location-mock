@@ -1,5 +1,5 @@
-import {urlify} from "../utils";
-import {URLS_DO_NOT_MATCH} from "./messages";
+import {urlify} from "../utils/index.js";
+import {URLS_DO_NOT_MATCH} from "./messages.js";
 
 
 export const toBeAt = function (

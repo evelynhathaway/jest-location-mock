@@ -1,5 +1,5 @@
 import {describe, it, expect} from "vitest";
-import {URLS_DO_NOT_MATCH} from "../messages";
+import {URLS_DO_NOT_MATCH} from "../messages.js";
 
 
 describe("assigning", () => {

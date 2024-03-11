@@ -1,5 +1,5 @@
 import {vi} from "vitest";
-import {LocationMockRelative} from "../utils";
+import {LocationMockRelative} from "../utils/index.js";
 
 
 export const replaceLocation = (): void => {

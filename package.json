@@ -1,6 +1,6 @@
 {
 	"name": "vitest-location-mock",
-	"version": "1.0.0",
+	"version": "1.0.4",
 	"description": "vitest hooks for JSDOM location mock",
 	"keywords": [
 		"vitest",

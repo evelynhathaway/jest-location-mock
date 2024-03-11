@@ -1,1 +1,1 @@
-export * from "./replace-location";
+export * from "./replace-location.js";
