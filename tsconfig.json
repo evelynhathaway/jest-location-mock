@@ -14,7 +14,7 @@
 	"include": [
 		"src",
 		"config",
-		"vitest.d.ts",
+		"vitest.ts",
 	],
 	"exclude": [
 		"node_modules",
