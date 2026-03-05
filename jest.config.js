@@ -18,8 +18,7 @@ export default {
 			statements: 100,
 		},
 	},
-	// testEnvironment: "jsdom",
-	testEnvironment: "./src/jest-environment-jsdom.ts",
+	testEnvironment: "jsdom",
 	setupFilesAfterEnv: [
 		"./config/jest-setup.ts",
 	],

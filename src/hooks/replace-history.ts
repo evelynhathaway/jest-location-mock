@@ -1,3 +1,5 @@
+import {originalLocationRef} from "./replace-location";
+
 export const replaceHistory = (): void => {
 	// Do nothing if window is not defined
 	// - Prevents an error when importing this mock in the setup file when some tests use the node test environment instead of JSDOM
@@ -18,8 +20,8 @@ export const replaceHistory = (): void => {
 							apply (...args) {
 								Reflect.apply(...args);
 								// Update the location mock if the location was updated
-								if (window._originalLocation && window.location.href !== window._originalLocation.href) {
-									window.location.href = window._originalLocation.href;
+								if (originalLocationRef.current && window.location.href !== originalLocationRef.current.href) {
+									window.location.href = originalLocationRef.current.href;
 								}
 							},
 						}
