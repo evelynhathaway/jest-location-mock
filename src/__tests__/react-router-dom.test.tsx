@@ -35,18 +35,18 @@ describe("react-router-dom", () => {
 	describe("<BrowserRouter>", () => {
 		it("should change routes alongside window.location", () => {
 			render(
-			<BrowserRouter>
-				<Routes>
-					<Route
-						path="/"
-						element={<Link to="/5c99ad6a-c1ed-4c6d-b4a9-9460a6da36f8">Link from Root to Page</Link>}
-					/>
-					<Route
-						path="/5c99ad6a-c1ed-4c6d-b4a9-9460a6da36f8"
-						element={<Link to="/">Link from Page to Root</Link>}
-					/>
-				</Routes>
-			</BrowserRouter>
+				<BrowserRouter>
+					<Routes>
+						<Route
+							path="/"
+							element={<Link to="/5c99ad6a-c1ed-4c6d-b4a9-9460a6da36f8">Link from Root to Page</Link>}
+						/>
+						<Route
+							path="/5c99ad6a-c1ed-4c6d-b4a9-9460a6da36f8"
+							element={<Link to="/">Link from Page to Root</Link>}
+						/>
+					</Routes>
+				</BrowserRouter>
 			);
 			act(() => {
 				screen.getByText("Link from Root to Page").click();
@@ -59,18 +59,18 @@ describe("react-router-dom", () => {
 	describe("<MemoryRouter>", () => {
 		it("should change routes, but window.location should not update", () => {
 			render(
-			<MemoryRouter>
-				<Routes>
-					<Route
-						path="/"
-						element={<Link to="/1494ea67-a401-43c8-b393-dc8c843f394b">Link from Root to Page</Link>}
-					/>
-					<Route
-						path="/1494ea67-a401-43c8-b393-dc8c843f394b"
-						element={<Link to="/">Link from Page to Root</Link>}
-					/>
-				</Routes>
-			</MemoryRouter>
+				<MemoryRouter>
+					<Routes>
+						<Route
+							path="/"
+							element={<Link to="/1494ea67-a401-43c8-b393-dc8c843f394b">Link from Root to Page</Link>}
+						/>
+						<Route
+							path="/1494ea67-a401-43c8-b393-dc8c843f394b"
+							element={<Link to="/">Link from Page to Root</Link>}
+						/>
+					</Routes>
+				</MemoryRouter>
 			);
 			act(() => {
 				screen.getByText("Link from Root to Page").click();
