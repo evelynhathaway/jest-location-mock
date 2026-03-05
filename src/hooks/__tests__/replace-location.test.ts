@@ -24,3 +24,14 @@ describe("window.location property descriptor", () => {
 		});
 	});
 });
+
+describe("window proxy", () => {
+	it("should reflect non-location properties", () => {
+		expect(window.open).toEqual(expect.any(Function));
+		expect(window.onclick).toEqual(null);
+		const clickHandler = jest.fn();
+		// eslint-disable-next-line unicorn/prefer-add-event-listener
+		window.onclick = clickHandler;
+		expect(window.onclick).toEqual(clickHandler);
+	});
+});

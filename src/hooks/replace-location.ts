@@ -1,4 +1,5 @@
 import {LocationMockRelative} from "../utils";
+import {getHost} from "../utils/get-host";
 
 export const originalLocationRef: {current: Location | null} = {current: null};
 
@@ -13,36 +14,38 @@ export const replaceLocation = (): void => {
 		return;
 	}
 
-	if (!originalLocationRef.current) {
-		originalLocationRef.current = window.location;
+	if (!window._globalProxy) {
+		throw new Error("window._globalProxy is not defined. This mock relies on an internal JSDOM property that may have changed. Please report this issue to the jest-location-mock.");
 	}
 
-	const locationMock = new LocationMockRelative(process.env.HOST || "http://localhost/");
+	const originalGlobalProxy = window._globalProxy;
+	originalLocationRef.current = originalGlobalProxy.location;
+
+	// Set the base URL for relative URLs to `HOST` environment variable, defaults to localhost
+	const locationMock = new LocationMockRelative(getHost());
 
 	// Setup Jest spies on the methods for convenience and our matchers
 	jest.spyOn(locationMock, "assign").mockName("window.location.assign");
 	jest.spyOn(locationMock, "reload").mockName("window.location.reload");
 	jest.spyOn(locationMock, "replace").mockName("window.location.replace");
 
-	const mockedWindow = new Proxy(window, {
+	const mockedWindow = new Proxy(originalGlobalProxy, {
 		get (target, property, receiver) {
 			if (property === "location") {
-				// console.log("Getting window.location");
 				return locationMock;
 			}
-			// eslint-disable-next-line @typescript-eslint/no-unsafe-return
-			return Reflect.get(target, property, receiver);
+			return Reflect.get(target, property, receiver) as unknown;
 		},
 		set (target, property, value, receiver) {
 			if (property === "location") {
-				// console.log("Setting window.location");
 				locationMock.href = value as string;
 				return true;
 			}
 			return Reflect.set(target, property, value, receiver);
 		},
 	});
-	// TODO: more proper emulation of JSDOM's internal VM logic
-	// window._globalObject = mockedWindow;
+	// I am unsure how long this internal property will work, but I cannot find any other way to shadow the
+	// unconfigurable `window.location` property in JSDOM v21+
+	// https://github.com/jsdom/jsdom/blob/57bbf9a5c2bd32d3c811068480dee3cc8da3dd34/lib/jsdom/browser/Window.js#L54-L60
 	window._globalProxy = mockedWindow;
 };
