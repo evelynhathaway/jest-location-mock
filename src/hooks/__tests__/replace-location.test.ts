@@ -18,7 +18,7 @@ describe("window.location property descriptor", () => {
 		it("should allow setting the href via the window.location setter", () => {
 			expect(window.location.href).toEqual("http://localhost/");
 			// TypeScript's built-in lib is confused about the type of the `window.location` setter
-			window.location = "http://localhost/04ec3193-4942-4da4-92bf-5d807ec3907e" as unknown as Location;
+			window.location = "http://localhost/04ec3193-4942-4da4-92bf-5d807ec3907e" as unknown as Location & string;
 			expect(window.location.href).toEqual("http://localhost/04ec3193-4942-4da4-92bf-5d807ec3907e");
 			expect(window.location.pathname).toEqual("/04ec3193-4942-4da4-92bf-5d807ec3907e");
 		});
