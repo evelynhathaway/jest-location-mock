@@ -8,3 +8,11 @@ import "whatwg-fetch";
 
 // Add matchers from Testing Library
 import "@testing-library/jest-dom";
+
+// Enable Node.js Text Encoder and TextDecoder in JSDOM environment for React Router tests
+import {TextDecoder, TextEncoder} from "node:util";
+
+if (!globalThis.TextEncoder || !globalThis.TextDecoder) {
+	globalThis.TextEncoder = TextEncoder;
+	globalThis.TextDecoder = TextDecoder;
+}
