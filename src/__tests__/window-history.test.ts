@@ -1,3 +1,5 @@
+import {describe, it, expect} from "@jest/globals";
+
 describe("window.history", () => {
 	describe("replaceState()", () => {
 		it("should update location mock", () => {

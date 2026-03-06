@@ -1,4 +1,5 @@
 /** @jest-environment node */
+import {describe, it, expect} from "@jest/globals";
 import {replaceLocation} from "../replace-location";
 
 describe("window._globalProxy", () => {

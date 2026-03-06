@@ -1,3 +1,5 @@
+import {describe, it, expect, beforeAll, afterAll, jest} from "@jest/globals";
+
 describe("host environment variable", () => {
 	// Runs before default hooks
 	beforeAll(() => {

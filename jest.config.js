@@ -23,4 +23,5 @@ export default {
 		"./config/jest-setup.ts",
 	],
 	verbose: true,
+	injectGlobals: false,
 };

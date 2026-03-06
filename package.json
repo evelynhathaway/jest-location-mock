@@ -75,6 +75,9 @@
 		"typescript": "^5.9.3",
 		"whatwg-fetch": "^3.6.20"
 	},
+	"peerDependencies": {
+		"@jest/globals": "^30.0.0"
+	},
 	"engines": {
 		"node": ">=20.0.0"
 	}
