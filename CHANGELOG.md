@@ -1,5 +1,54 @@
 # Changelog
 
+## v3.0.0
+
+**[`v2.0.0...v3.0.0`](https://github.com/evelynhathaway/jest-location-mock/compare/v2.0.0...v3.0.0)** - **2026-03-06**
+
+### 💥 Breaking
+
+- Add setter method on window.location [`4be68a0`](https://github.com/evelynhathaway/jest-location-mock/commit/4be68a0)
+- Add spies and proxy for window.history to track its updates to the original window.location [`628a60d`](https://github.com/evelynhathaway/jest-location-mock/commit/628a60d)
+- Remove `expect(window.location).toBeAt("/pathname")` matcher [`27b5d54`](https://github.com/evelynhathaway/jest-location-mock/commit/27b5d54)
+- Require Node >=20, Jest ^30, upgrade dependencies [`e9713a2`](https://github.com/evelynhathaway/jest-location-mock/commit/e9713a2)
+
+### ⚡ Improvement
+
+- Add support for injectGlobals: false [`773b8a4`](https://github.com/evelynhathaway/jest-location-mock/commit/773b8a4)
+- Proxying the window._globalProxy inside the Jest environment, reverting to the vanilla JSDOM environment [`b3141f2`](https://github.com/evelynhathaway/jest-location-mock/commit/b3141f2)
+
+### 📄 Documentation
+
+- Add limitations, new features, alternative setup and configuration methods to readme [`51a65bf`](https://github.com/evelynhathaway/jest-location-mock/commit/51a65bf)
+- Fix comma typos in readme [`8f9af49`](https://github.com/evelynhathaway/jest-location-mock/commit/8f9af49)
+- Revert to spaces in README.md for a nicer npm homepage [`3083396`](https://github.com/evelynhathaway/jest-location-mock/commit/3083396)
+- Update README.md for JSDOM v21+ changes [`3a2267c`](https://github.com/evelynhathaway/jest-location-mock/commit/3a2267c)
+
+### 🐛 Fix
+
+- Prevent window global proxy from returning unconfigurable for the set trap erroneously [`1acfaf0`](https://github.com/evelynhathaway/jest-location-mock/commit/1acfaf0)
+- Properly reset window.location and window.history between tests [`59847e1`](https://github.com/evelynhathaway/jest-location-mock/commit/59847e1)
+- Remove type declaration for internal JSDOM API [`06a5922`](https://github.com/evelynhathaway/jest-location-mock/commit/06a5922)
+
+### 📦 Package
+
+- **npm:** Bump jest-diff from 29.6.4 to 29.7.0 [`d592844`](https://github.com/evelynhathaway/jest-location-mock/commit/d592844)
+- **npm:** npm update deep [`26652b8`](https://github.com/evelynhathaway/jest-location-mock/commit/26652b8)
+
+### 🔧 Configuration
+
+- Upgrade Node.js in CI to v24 [`8d89d38`](https://github.com/evelynhathaway/jest-location-mock/commit/8d89d38)
+
+### 🧹 Internal
+
+- Add React Testing Library cleanup to jest-setup to support missing globals [`9ec5d76`](https://github.com/evelynhathaway/jest-location-mock/commit/9ec5d76)
+- Downgrade semantic-release [`774ada3`](https://github.com/evelynhathaway/jest-location-mock/commit/774ada3)
+- Improve tests for existing logic [`8ef5de8`](https://github.com/evelynhathaway/jest-location-mock/commit/8ef5de8)
+- Remove extraneous eslint disables [`e3401af`](https://github.com/evelynhathaway/jest-location-mock/commit/e3401af)
+- Simplify GitHub Actions npm cache [`0a0441c`](https://github.com/evelynhathaway/jest-location-mock/commit/0a0441c)
+- Update GitHub Actions [`ed50b4d`](https://github.com/evelynhathaway/jest-location-mock/commit/ed50b4d)
+- Update workaround for the window.location setter type in test [`2c5a159`](https://github.com/evelynhathaway/jest-location-mock/commit/2c5a159)
+- Upgrade ESLint config [`91295cc`](https://github.com/evelynhathaway/jest-location-mock/commit/91295cc)
+
 ## v3.0.0-alpha.1
 
 **[`v2.0.0...v3.0.0-alpha.1`](https://github.com/evelynhathaway/jest-location-mock/compare/v2.0.0...v3.0.0-alpha.1)** - **2023-10-20**
