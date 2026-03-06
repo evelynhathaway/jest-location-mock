@@ -1,5 +1,32 @@
 # Changelog
 
+## v3.0.0-alpha.1
+
+**[`v2.0.0...v3.0.0-alpha.1`](https://github.com/evelynhathaway/jest-location-mock/compare/v2.0.0...v3.0.0-alpha.1)** - **2023-10-20**
+
+### 💥 Breaking
+
+- Add setter method on window.location [`4be68a0`](https://github.com/evelynhathaway/jest-location-mock/commit/4be68a0)
+- Add spies and proxy for window.history to track its updates to the original window.location [`628a60d`](https://github.com/evelynhathaway/jest-location-mock/commit/628a60d)
+
+### 📄 Documentation
+
+- Add limitations, new features, alternative setup and configuration methods to readme [`51a65bf`](https://github.com/evelynhathaway/jest-location-mock/commit/51a65bf)
+- Fix comma typos in readme [`8f9af49`](https://github.com/evelynhathaway/jest-location-mock/commit/8f9af49)
+
+### 📦 Package
+
+- **npm:** Bump jest-diff from 29.6.4 to 29.7.0 [`d592844`](https://github.com/evelynhathaway/jest-location-mock/commit/d592844)
+- **npm:** npm update deep [`26652b8`](https://github.com/evelynhathaway/jest-location-mock/commit/26652b8)
+
+### 🧹 Internal
+
+- Downgrade semantic-release [`774ada3`](https://github.com/evelynhathaway/jest-location-mock/commit/774ada3)
+- Improve tests for existing logic [`8ef5de8`](https://github.com/evelynhathaway/jest-location-mock/commit/8ef5de8)
+- Remove extraneous eslint disables [`e3401af`](https://github.com/evelynhathaway/jest-location-mock/commit/e3401af)
+- Simplify GitHub Actions npm cache [`0a0441c`](https://github.com/evelynhathaway/jest-location-mock/commit/0a0441c)
+- Update GitHub Actions [`ed50b4d`](https://github.com/evelynhathaway/jest-location-mock/commit/ed50b4d)
+
 ## v2.0.0
 
 **[`v1.0.10...v2.0.0`](https://github.com/evelynhathaway/jest-location-mock/compare/v1.0.10...v2.0.0)** - **2023-09-04**

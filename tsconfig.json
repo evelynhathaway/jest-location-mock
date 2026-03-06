@@ -11,11 +11,11 @@
 		"outDir": "lib",
 		"moduleResolution": "node",
 		"declaration": true,
+		"jsx": "react"
 	},
 	"include": [
 		"src",
 		"config",
-		"jest.d.ts",
 	],
 	"exclude": [
 		"node_modules",

@@ -1,5 +1,12 @@
-import {replaceLocation} from "./hooks";
-
+import {beforeAll, beforeEach} from "@jest/globals";
+import {replaceHistory, replaceLocation, reset} from "./hooks";
 
 // Setup default hooks configuration
-beforeEach(replaceLocation);
+beforeAll(() => {
+	replaceLocation();
+	replaceHistory();
+});
+
+beforeEach(() => {
+	reset();
+});
