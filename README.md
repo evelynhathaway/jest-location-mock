@@ -56,10 +56,10 @@ To start using Jest Location Mock, importing the default export will add the `ex
 
 ```js
 export default {
-	// [other Jest config properties...]
-	setupFilesAfterEnv: [
-		"./config/jest-setup.js"
-	]
+    // [other Jest config properties...]
+    setupFilesAfterEnv: [
+        "./config/jest-setup.js"
+    ]
 };
 ```
 
@@ -95,10 +95,10 @@ If you don't want to group the location mock with any other test setup logic, yo
 
 ```js
 export default {
-	// [other Jest config properties...]
-	setupFilesAfterEnv: [
-		"jest-location-mock"
-	]
+    // [other Jest config properties...]
+    setupFilesAfterEnv: [
+        "jest-location-mock"
+    ]
 };
 ```
 
@@ -115,10 +115,10 @@ Jest setup and config files can be in TypeScript, given that you are already usi
 import type {Config} from "jest";
 
 const config: Config = {
-	// [other Jest config properties...]
-	setupFilesAfterEnv: [
-		"./config/jest-setup.ts"
-	]
+    // [other Jest config properties...]
+    setupFilesAfterEnv: [
+        "./config/jest-setup.ts"
+    ]
 };
 
 export default config;
@@ -147,7 +147,7 @@ However, the most straightforward solution to changing the starting location is 
 import "jest-location-mock";
 
 beforeEach(() => {
-	window.location = "https://example.com";
+    window.location.href = "https://example.com";
 });
 ```
 
@@ -157,7 +157,7 @@ Or in your tests:
 
 ```js
 beforeEach(() => {
-	window.location = "https://example.com";
+    window.location.href = "https://example.com";
 });
 ```
 
@@ -178,10 +178,10 @@ import "jest-location-mock";
 
 // Example test that will pass once the mock is imported
 test("should not error when pressed", () => {
-	jest.spyOn(console, "error");
-	window.location.href = "https://example.com/";
-	expect(console.error).not.toHaveBeenCalled();
-	expect(window.location.href).toBe("https://example.com/");
+    jest.spyOn(console, "error");
+    window.location.href = "https://example.com/";
+    expect(console.error).not.toHaveBeenCalled();
+    expect(window.location.href).toBe("https://example.com/");
 });
 ```
 
@@ -210,15 +210,15 @@ import {replaceHistory, replaceLocation, reset} from "jest-location-mock/lib/hoo
 
 // `beforeAll()` is used by default to setup the mock on the window
 beforeAll(() => {
-	// This is where the most of magic happens, you probably want to keep this
-	replaceLocation();
-	// New in v3.0.0, proxy and spy on `window.history` to support use cases like browser router from react-router-dom
-	// - Remove to isolate the `window.location` mock from `window.history`
-	replaceHistory();
+    // This is where the most of magic happens, you probably want to keep this
+    replaceLocation();
+    // New in v3.0.0, proxy and spy on `window.history` to support use cases like browser router from react-router-dom
+    // - Remove to isolate the `window.location` mock from `window.history`
+    replaceHistory();
 });
 // `beforeEach()` is used by default for a clean slate for each test
 beforeEach(() => {
-	reset();
+    reset();
 });
 ```
 
