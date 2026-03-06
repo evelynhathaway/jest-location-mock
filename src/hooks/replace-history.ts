@@ -1,3 +1,4 @@
+import {jest} from "@jest/globals";
 import {originalLocationRef} from "./replace-location";
 
 export const replaceHistory = (): void => {
@@ -13,7 +14,7 @@ export const replaceHistory = (): void => {
 			get (target, property, receiver) {
 				const realValue: unknown = Reflect.get(target, property, receiver);
 				// If the property of window.history is a method, wrap it in a proxy to update the location mock
-				if (realValue instanceof Function || jest.isMockFunction(realValue)) {
+				if (typeof realValue === "function" || jest.isMockFunction(realValue)) {
 					return new Proxy(
 						realValue,
 						{
@@ -32,7 +33,7 @@ export const replaceHistory = (): void => {
 		}
 	);
 
-	// Setup Jest spies on the methods for convenience and our matchers
+	// Setup Jest spies on the methods for convenience
 	jest.spyOn(proxiedHistory, "replaceState").mockName("window.history.replaceState");
 	jest.spyOn(proxiedHistory, "pushState").mockName("window.history.pushState");
 	jest.spyOn(proxiedHistory, "go").mockName("window.history.go");

@@ -1,4 +1,5 @@
 /** @jest-environment node */
+import {describe, it, expect} from "@jest/globals";
 import {replaceHistory} from "../replace-history";
 
 describe("replaceHistory()", () => {

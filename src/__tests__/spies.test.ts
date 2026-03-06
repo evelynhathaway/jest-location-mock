@@ -1,3 +1,5 @@
+import {describe, it, expect} from "@jest/globals";
+
 describe("window.location", () => {
 	it("should have spy for assign()", () => {
 		window.location.assign("/b3a06294-6e91-44c4-9a16-e8f328105940");

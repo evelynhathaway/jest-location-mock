@@ -1,7 +1,7 @@
 // For a detailed explanation regarding each configuration property, visit:
 // https://jestjs.io/docs/en/configuration.html
 
-module.exports = {
+export default {
 	preset: "ts-jest",
 	clearMocks: true,
 	collectCoverage: true,
@@ -23,4 +23,5 @@ module.exports = {
 		"./config/jest-setup.ts",
 	],
 	verbose: true,
+	injectGlobals: false,
 };
