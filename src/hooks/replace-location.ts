@@ -1,3 +1,4 @@
+import {jest} from "@jest/globals";
 import {LocationMockRelative} from "../utils";
 import {getHost} from "../utils/get-host";
 
@@ -19,7 +20,7 @@ export const replaceLocation = (): void => {
 	// Set the base URL for relative URLs to `HOST` environment variable, defaults to localhost
 	const locationMock = new LocationMockRelative(getHost());
 
-	// Setup Jest spies on the methods for convenience and our matchers
+	// Setup Jest spies on the methods for convenience
 	jest.spyOn(locationMock, "assign").mockName("window.location.assign");
 	jest.spyOn(locationMock, "reload").mockName("window.location.reload");
 	jest.spyOn(locationMock, "replace").mockName("window.location.replace");

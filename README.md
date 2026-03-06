@@ -37,7 +37,6 @@ This Jest plugin fixes this error and mocks out `window.location` so it behaves 
 - ⚓ Supports using relative URLs so pathnames that work in the browser also work in JSDOM
 - 🔕 Prevents `console.error` messages from JSDOM when changing `window.location`
 - 🤐 Does not affect Jest environments without `window`, or in other words, it doesn't cause errors on mixed JSDOM / Node.js projects
-- 🔍 Provides a custom Jest matcher with TypeScript support for checking the current location
 
 ## Installation
 
@@ -47,8 +46,8 @@ npm install --save-dev jest-location-mock
 
 ## Usage
 
-To start using Jest Location Mock, importing the default export will add the `expect()` matcher as well as a
-`beforeAll()` and `beforeEach()` hook that will mock `window.location` and watch `window.history`.
+To start using Jest Location Mock, importing the default export will add a `beforeAll()` and `beforeEach()` hook that
+will mock `window.location` and watch `window.history`.
 
 ### Quick Start
 
@@ -66,7 +65,7 @@ export default {
 **`config/jest-setup.js`**
 
 ```js
-// Mock `window.location` with Jest spies and Jest expect matcher
+// Mock `window.location` with Jest spies
 import "jest-location-mock";
 ```
 
@@ -80,7 +79,7 @@ Create React App (`react-scripts`) [automatically includes `setupFilesAfterEnv`]
 **`src/setupTests.js`** or **`src/setupTests.ts`**
 
 ```js
-// Mock `window.location` with Jest spies and Jest expect matcher
+// Mock `window.location` with Jest spies
 import "jest-location-mock";
 ```
 
@@ -127,7 +126,7 @@ export default config;
 **`config/jest-setup.ts`**
 
 ```ts
-// Mock `window.location` with Jest spies and Jest expect matcher
+// Mock `window.location` with Jest spies
 import "jest-location-mock";
 ```
 
@@ -143,7 +142,7 @@ However, the most straightforward solution to changing the starting location is 
 **`config/jest-setup.js`**
 
 ```js
-// Mock `window.location` with Jest spies and Jest expect matcher
+// Mock `window.location` with Jest spies
 import "jest-location-mock";
 
 beforeEach(() => {
@@ -173,7 +172,7 @@ If you do not include the default import in the test environment setup file, you
 **`__tests__/needs-location-mock-example.test.js`**
 
 ```js
-// Mock `window.location` with Jest spies and Jest expect matcher
+// Mock `window.location` with Jest spies
 import "jest-location-mock";
 
 // Example test that will pass once the mock is imported
@@ -190,22 +189,16 @@ test("should not error when pressed", () => {
 <details>
 <summary><strong>Customizing the Behavior (Advanced)</strong></summary>
 
-If the default behavior of including the Jest `expect()` matchers and creating a `beforeEach()` Jest hook that mocks the `window.location` and listens to methods on `window.history` doesn't work best for you, you may replace the default import with a custom setup.
+If the default behavior of creating a `beforeAll()` and `beforeEach()` Jest hook that mocks the `window.location` and
+listens to methods on `window.history` doesn't work best for you, you may replace the default import with a custom
+setup.
 
 **`config/jest-setup.js`**
 
 ```js
 // Remove: `import "jest-location-mock";`
 
-// Do you like the fun little Jest matchers? If so, you may use this import:
-import "jest-location-mock/lib/extend-expect";
-// Or exclude this to omit them (remember to remove the default import)
-
-// ---
-
-// Did you want to exclude the matchers, but still want the default hook? If so you may use this import:
-import "jest-location-mock/lib/setup-hooks";
-// Otherwise, you may import the functions that run inside the hook and craft your own logic
+// You may import the functions that run inside the hook and craft your own logic
 import {replaceHistory, replaceLocation, reset} from "jest-location-mock/lib/hooks";
 
 // `beforeAll()` is used by default to setup the mock on the window
@@ -223,26 +216,6 @@ beforeEach(() => {
 ```
 
 </details>
-
-### Jest `expect` Matchers
-
-#### `expect(location).toBeAt(url, [base])`
-
-**Throws**: When the URLs have a different absolute `href`.
-
-| Parameter | Type                | Description                                                             |
-| --------- | ------------------- | ----------------------------------------------------------------------- |
-| location  | `Location` \| `URL` | Instance of `URL` to check its `href`                                   |
-| url       | `string` \| `URL`   | Relative or absolute `URL`                                              |
-| base      | `string` \| `URL`   | If the `url` parameter is relative, an base URL for the URL constructor |
-
-```ts
-it("should call assign with a relative url", () => {
-    window.location.assign("/relative-url");
-    expect(window.location).not.toBeAt("/");
-    expect(window.location).toBeAt("/relative-url");
-});
-```
 
 ## Limitations
 

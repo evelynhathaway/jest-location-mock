@@ -1,3 +1,4 @@
+import {jest} from "@jest/globals";
 import {originalLocationRef} from "./replace-location";
 
 export const replaceHistory = (): void => {
@@ -32,7 +33,7 @@ export const replaceHistory = (): void => {
 		}
 	);
 
-	// Setup Jest spies on the methods for convenience and our matchers
+	// Setup Jest spies on the methods for convenience
 	jest.spyOn(proxiedHistory, "replaceState").mockName("window.history.replaceState");
 	jest.spyOn(proxiedHistory, "pushState").mockName("window.history.pushState");
 	jest.spyOn(proxiedHistory, "go").mockName("window.history.go");

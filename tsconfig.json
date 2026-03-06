@@ -16,7 +16,6 @@
 	"include": [
 		"src",
 		"config",
-		"jest.d.ts",
 	],
 	"exclude": [
 		"node_modules",

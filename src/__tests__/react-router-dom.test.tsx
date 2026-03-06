@@ -28,7 +28,7 @@ describe("react-router-dom", () => {
 			act(() => {
 				screen.getByText("Link from Root to Page").click();
 			});
-			expect(window.location).toBeAt("/e8ab27c6-7e83-4fa8-a52b-b3bab5023ff0");
+			expect(window.location.pathname).toEqual("/e8ab27c6-7e83-4fa8-a52b-b3bab5023ff0");
 			expect(screen.getByText("Link from Page to Root")).toBeInTheDocument();
 		});
 	});
@@ -52,7 +52,7 @@ describe("react-router-dom", () => {
 			act(() => {
 				screen.getByText("Link from Root to Page").click();
 			});
-			expect(window.location).toBeAt("/5c99ad6a-c1ed-4c6d-b4a9-9460a6da36f8");
+			expect(window.location.pathname).toEqual("/5c99ad6a-c1ed-4c6d-b4a9-9460a6da36f8");
 			expect(screen.getByText("Link from Page to Root")).toBeInTheDocument();
 		});
 	});
@@ -78,7 +78,7 @@ describe("react-router-dom", () => {
 			});
 			// MemoryRouter doesn't change the `window.location`
 			// - This time I checked a clean environment without any mocks or other tests
-			expect(window.location).toBeAt("/");
+			expect(window.location.pathname).toEqual("/");
 			// The router should still behave like normal, even though it wouldn't change the location on the browser
 			expect(screen.getByText("Link from Page to Root")).toBeInTheDocument();
 		});
