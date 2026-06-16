@@ -55,3 +55,21 @@ describe("window.history", () => {
 		});
 	});
 });
+
+describe("globalThis.history", () => {
+	describe("replaceState()", () => {
+		it("should update location mock", () => {
+			expect(globalThis.location.pathname).toEqual("/");
+			globalThis.history.replaceState(null, "", "/0e37bca8-b8e3-49ee-8ac6-57e50c2884d3");
+			expect(globalThis.location.pathname).toEqual("/0e37bca8-b8e3-49ee-8ac6-57e50c2884d3");
+		});
+	});
+
+	describe("pushState()", () => {
+		it("should update location mock", () => {
+			expect(globalThis.location.pathname).toEqual("/");
+			globalThis.history.pushState(null, "", "/e8bf1e04-46e9-4f30-abcb-320412243ea2");
+			expect(globalThis.location.pathname).toEqual("/e8bf1e04-46e9-4f30-abcb-320412243ea2");
+		});
+	});
+});
