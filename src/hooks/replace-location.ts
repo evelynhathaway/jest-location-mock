@@ -41,8 +41,32 @@ export const replaceLocation = (): void => {
 			return Reflect.set(target, property, value);
 		},
 	});
+
+	const mockedGlobalThis = new Proxy(globalThis, {
+		get (target, property, receiver) {
+			if (property === "location") {
+				return locationMock;
+			}
+			return Reflect.get(target, property, receiver) as unknown;
+		},
+		set (target, property, value) {
+			if (property === "location") {
+				locationMock.href = value as string;
+				return true;
+			}
+			// Cannot add `receiver` argument or it will always return false as if it's non configurable
+			return Reflect.set(target, property, value);
+		},
+	});
+
 	// I am unsure how long this internal property will work, but I cannot find any other way to shadow the
 	// unconfigurable `window.location` property in JSDOM v21+
 	// https://github.com/jsdom/jsdom/blob/57bbf9a5c2bd32d3c811068480dee3cc8da3dd34/lib/jsdom/browser/Window.js#L54-L60
 	(window as {_globalProxy?: Window})._globalProxy = mockedWindow;
+	// Shadow `globalThis`
+	// - Cannot define property `location` on `globalThis` directly since it's non-configurable
+	// - Cannot assign `globalThis` to a new object since it's non-writable
+	Object.defineProperty(globalThis, "globalThis", {
+		value: mockedGlobalThis,
+	});
 };
