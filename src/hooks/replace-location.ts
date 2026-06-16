@@ -1,5 +1,5 @@
 import {jest} from "@jest/globals";
-import {LocationMockRelative} from "../utils";
+import {LocationMockRelative, makeAbsolute} from "../utils";
 import {getHost} from "../utils/get-host";
 
 export const originalLocationRef: {current: Location | null} = {current: null};
@@ -34,7 +34,7 @@ export const replaceLocation = (): void => {
 		},
 		set (target, property, value) {
 			if (property === "location") {
-				locationMock.href = value as string;
+				locationMock.href = makeAbsolute(value as string, locationMock.origin);
 				return true;
 			}
 			// Cannot add `receiver` argument or it will always return false as if it's non configurable
@@ -51,7 +51,7 @@ export const replaceLocation = (): void => {
 		},
 		set (target, property, value) {
 			if (property === "location") {
-				locationMock.href = value as string;
+				locationMock.href = makeAbsolute(value as string, locationMock.origin);
 				return true;
 			}
 			// Cannot add `receiver` argument or it will always return false as if it's non configurable
