@@ -1,5 +1,17 @@
 # Changelog
 
+## v3.1.0
+
+**[`v3.0.0...v3.1.0`](https://github.com/evelynhathaway/jest-location-mock/compare/v3.0.0...v3.1.0)** - **2026-06-16**
+
+### ✨ Feature
+
+- Support use of globalThis.location [`0b31045`](https://github.com/evelynhathaway/jest-location-mock/commit/0b31045)
+
+### 🐛 Fix
+
+- Make URLs absolute even if they are set via `window.location` setter [`8857167`](https://github.com/evelynhathaway/jest-location-mock/commit/8857167)
+
 ## v3.0.0
 
 **[`v2.0.0...v3.0.0`](https://github.com/evelynhathaway/jest-location-mock/compare/v2.0.0...v3.0.0)** - **2026-03-06**
