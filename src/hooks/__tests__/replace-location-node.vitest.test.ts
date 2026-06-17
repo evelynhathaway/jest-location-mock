@@ -9,7 +9,7 @@ import {
 	afterAll,
 } from "vitest";
 import {replaceLocation} from "../replace-location.vitest";
-import {testSuite} from "./test-suites/replace-location-node";
+import {testSuite} from "./test-suites/replace-location-node.test";
 
 testSuite({
 	describe,

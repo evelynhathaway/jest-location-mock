@@ -7,7 +7,7 @@ import {
 	beforeAll,
 	afterAll,
 } from "@jest/globals";
-import {testSuite} from "./test-suites/location-mock-relative";
+import {testSuite} from "./test-suites/location-mock-relative.test";
 
 testSuite({
 	describe,

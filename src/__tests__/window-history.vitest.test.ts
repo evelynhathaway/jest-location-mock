@@ -7,7 +7,7 @@ import {
 	beforeAll,
 	afterAll,
 } from "vitest";
-import {testSuite} from "./test-suites/window-history";
+import {testSuite} from "./test-suites/window-history.test";
 
 testSuite({
 	describe,

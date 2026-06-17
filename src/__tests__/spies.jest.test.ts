@@ -7,7 +7,7 @@ import {
 	beforeAll,
 	afterAll,
 } from "@jest/globals";
-import {testSuite} from "./test-suites/spies";
+import {testSuite} from "./test-suites/spies.test";
 
 testSuite({
 	describe,

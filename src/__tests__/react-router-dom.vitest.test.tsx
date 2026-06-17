@@ -7,7 +7,7 @@ import {
 	beforeAll,
 	afterAll,
 } from "vitest";
-import {testSuite} from "./test-suites/react-router-dom";
+import {testSuite} from "./test-suites/react-router-dom.test";
 
 testSuite({
 	describe,

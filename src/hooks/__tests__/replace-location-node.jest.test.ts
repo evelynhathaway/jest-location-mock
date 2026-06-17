@@ -9,7 +9,7 @@ import {
 	afterAll,
 } from "@jest/globals";
 import {replaceLocation} from "../replace-location.jest";
-import {testSuite} from "./test-suites/replace-location-node";
+import {testSuite} from "./test-suites/replace-location-node.test";
 
 testSuite({
 	describe,

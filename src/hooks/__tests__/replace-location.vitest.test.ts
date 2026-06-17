@@ -8,7 +8,7 @@ import {
 	afterAll,
 	vi,
 } from "vitest";
-import {testSuite} from "./test-suites/replace-location";
+import {testSuite} from "./test-suites/replace-location.test";
 
 testSuite({
 	describe,
