@@ -14,7 +14,7 @@ export const replaceHistory = (): void => {
 			get (target, property, receiver) {
 				const realValue: unknown = Reflect.get(target, property, receiver);
 				// If the property of window.history is a method, wrap it in a proxy to update the location mock
-				if (typeof realValue === "function" || jest.isMockFunction(realValue)) {
+				if (typeof realValue === "function") {
 					return new Proxy(
 						realValue,
 						{
