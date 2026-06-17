@@ -1,5 +1,17 @@
 # Changelog
 
+## v4.0.0-alpha.2
+
+**[`v4.0.0-alpha.1...v4.0.0-alpha.2`](https://github.com/evelynhathaway/jest-location-mock/compare/v4.0.0-alpha.1...v4.0.0-alpha.2)** - **2026-06-17**
+
+### 💥 Breaking
+
+- Remove /lib directory, ship ESM and commonjs [`821c231`](https://github.com/evelynhathaway/jest-location-mock/commit/821c231)
+
+### 📄 Documentation
+
+- Update readme to reflect that Vitest will come in v4 [`af91acc`](https://github.com/evelynhathaway/jest-location-mock/commit/af91acc)
+
 ## v4.0.0-alpha.1
 
 **[`v3.1.0...v4.0.0-alpha.1`](https://github.com/evelynhathaway/jest-location-mock/compare/v3.1.0...v4.0.0-alpha.1)** - **2026-06-17**
