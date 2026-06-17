@@ -30,9 +30,9 @@ This Jest/Vitest plugin fixes this error and mocks out `window.location` so it b
 
 ## Features
 
-- 🆕 **New in v3.2.0:** Compatibility with Vitest
-- 🆕 **New in v3.0.0:** Compatibility with JSDOM's `window.history` implementation and `react-router-dom` ([see limitations](#limitations))
-- 🆕 **New in v3.0.0:** Compatibility with JSDOM v21+'s unconfigurable / unforgeable `window.location`
+- 🆕 **New in v4.0.0:** Compatibility with Vitest
+- 🌐 Compatibility with JSDOM's `window.history` implementation and `react-router-dom` ([see limitations](#limitations))
+- 💣 Compatibility with JSDOM v21+'s unconfigurable / unforgeable `window.location`
 - 🎛️ Mocks and controls `window.location` in JSDOM Jest/Vitest tests
 - 🕵️‍♀️ Includes Jest/Vitest spies all of the methods on `window.location` and `window.history`
 - ⚓ Supports using relative URLs so pathnames that work in the browser also work in JSDOM
