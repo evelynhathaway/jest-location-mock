@@ -1,5 +1,13 @@
 # Changelog
 
+## v4.0.1
+
+**[`v4.0.0...v4.0.1`](https://github.com/evelynhathaway/jest-location-mock/compare/v4.0.0...v4.0.1)** - **2026-06-17**
+
+### 📄 Documentation
+
+- Fix typos for vitest-setup.js files in the readme [`48d65cb`](https://github.com/evelynhathaway/jest-location-mock/commit/48d65cb)
+
 ## v4.0.0
 
 **[`v3.1.0...v4.0.0`](https://github.com/evelynhathaway/jest-location-mock/compare/v3.1.0...v4.0.0)** - **2026-06-17**
