@@ -1,5 +1,19 @@
 # Changelog
 
+## v4.0.0-alpha.1
+
+**[`v3.1.0...v4.0.0-alpha.1`](https://github.com/evelynhathaway/jest-location-mock/compare/v3.1.0...v4.0.0-alpha.1)** - **2026-06-17**
+
+### 💥 Breaking
+
+- Add Vitest support, assign mockedWindow to window for Vitest support [`200d94f`](https://github.com/evelynhathaway/jest-location-mock/commit/200d94f)
+- Replace hooks barrel file with a jest.ts one, remove utils barrel file, do not export utils in other barrels, use ESM internally, target ESNext [`e583d9a`](https://github.com/evelynhathaway/jest-location-mock/commit/e583d9a)
+
+### 🧹 Internal
+
+- Remove jest.isMockFunction check in proxiedHistory [`6c0b43e`](https://github.com/evelynhathaway/jest-location-mock/commit/6c0b43e)
+- Rename test suites to include `.test` extension prefix to prevent @typescript-eslint/unbound-method errors [`aba4e6f`](https://github.com/evelynhathaway/jest-location-mock/commit/aba4e6f)
+
 ## v3.1.0
 
 **[`v3.0.0...v3.1.0`](https://github.com/evelynhathaway/jest-location-mock/compare/v3.0.0...v3.1.0)** - **2026-06-16**
