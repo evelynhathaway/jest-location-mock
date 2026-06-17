@@ -1,12 +1,10 @@
 {
 	"extends": "./tsconfig.json",
 	"compilerOptions": {
+		"outDir": "dist/esm",
 		"noEmit": false,
 		"allowImportingTsExtensions": false,
-		"rewriteRelativeImportExtensions": true,
-		"module": "commonjs",
-		"moduleResolution": "node",
-		"skipLibCheck": true
+		"rewriteRelativeImportExtensions": true
 	},
 	"exclude": [
 		"**/*.test.*",

@@ -3,7 +3,7 @@ import eslintPluginEvelyn from "eslint-plugin-evelyn";
 export default [
 	{
 		ignores: [
-			"./lib/",
+			"./dist/",
 		],
 	},
 	...eslintPluginEvelyn.configs.base,

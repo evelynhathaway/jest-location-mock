@@ -10,7 +10,8 @@ node_modules/
 !.vscode/extensions.json
 
 # Built
-/dist
+/dist/*/*
+!/dist/cjs/package.json
 /lib
 
 # Testing
