@@ -1,7 +1,6 @@
-import {jest} from "@jest/globals";
 import {originalLocationRef} from "./replace-location";
 
-export const replaceHistory = (): void => {
+export const replaceHistory = (spyOn: (object: unknown, method: string) => {mockName: (name: string) => void}): void => {
 	// Do nothing if window is not defined
 	// - Prevents an error when importing this mock in the setup file when some tests use the node test environment instead of JSDOM
 	if (typeof window === "undefined") {
@@ -33,12 +32,12 @@ export const replaceHistory = (): void => {
 		}
 	);
 
-	// Setup Jest spies on the methods for convenience
-	jest.spyOn(proxiedHistory, "replaceState").mockName("window.history.replaceState");
-	jest.spyOn(proxiedHistory, "pushState").mockName("window.history.pushState");
-	jest.spyOn(proxiedHistory, "go").mockName("window.history.go");
-	jest.spyOn(proxiedHistory, "back").mockName("window.history.back");
-	jest.spyOn(proxiedHistory, "forward").mockName("window.history.forward");
+	// Setup spies on the methods for convenience
+	spyOn(proxiedHistory, "replaceState").mockName("window.history.replaceState");
+	spyOn(proxiedHistory, "pushState").mockName("window.history.pushState");
+	spyOn(proxiedHistory, "go").mockName("window.history.go");
+	spyOn(proxiedHistory, "back").mockName("window.history.back");
+	spyOn(proxiedHistory, "forward").mockName("window.history.forward");
 
 	// Add the property to the Window
 	Object.defineProperty(

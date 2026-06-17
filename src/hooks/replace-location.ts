@@ -1,10 +1,9 @@
-import {jest} from "@jest/globals";
 import {LocationMockRelative, makeAbsolute} from "../utils";
 import {getHost} from "../utils/get-host";
 
 export const originalLocationRef: {current: Location | null} = {current: null};
 
-export const replaceLocation = (): void => {
+export const replaceLocation = (spyOn: (object: unknown, method: string) => {mockName: (name: string) => void}): void => {
 	// Do nothing if window is not defined
 	// - Prevents an error when importing this mock in the setup file when some tests use the node test environment instead of JSDOM
 	if (typeof window === "undefined") {
@@ -20,10 +19,10 @@ export const replaceLocation = (): void => {
 	// Set the base URL for relative URLs to `HOST` environment variable, defaults to localhost
 	const locationMock = new LocationMockRelative(getHost());
 
-	// Setup Jest spies on the methods for convenience
-	jest.spyOn(locationMock, "assign").mockName("window.location.assign");
-	jest.spyOn(locationMock, "reload").mockName("window.location.reload");
-	jest.spyOn(locationMock, "replace").mockName("window.location.replace");
+	// Setup spies on the methods for convenience
+	spyOn(locationMock, "assign").mockName("window.location.assign");
+	spyOn(locationMock, "reload").mockName("window.location.reload");
+	spyOn(locationMock, "replace").mockName("window.location.replace");
 
 	const mockedWindow = new Proxy(window, {
 		get (target, property, receiver) {
@@ -59,10 +58,15 @@ export const replaceLocation = (): void => {
 		},
 	});
 
+	// Shadow `window` via internal JSDOM property (works for Jest)
 	// I am unsure how long this internal property will work, but I cannot find any other way to shadow the
 	// unconfigurable `window.location` property in JSDOM v21+
 	// https://github.com/jsdom/jsdom/blob/57bbf9a5c2bd32d3c811068480dee3cc8da3dd34/lib/jsdom/browser/Window.js#L54-L60
 	(window as {_globalProxy?: Window})._globalProxy = mockedWindow;
+	// Replace `window` (works for Vitest)
+	// eslint-disable-next-line no-global-assign
+	window = mockedWindow;
+
 	// Shadow `globalThis`
 	// - Cannot define property `location` on `globalThis` directly since it's non-configurable
 	// - Cannot assign `globalThis` to a new object since it's non-writable

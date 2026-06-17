@@ -4,7 +4,7 @@
 
 # Jest Location Mock
 
-**Jest hooks for JSDOM location mock**
+**Jest & Vitest hooks for JSDOM location mock**
 
 [![npm version](https://badgen.net/npm/v/jest-location-mock?icon=npm)](https://www.npmjs.com/package/jest-location-mock)
 [![check status](https://badgen.net/github/checks/evelynhathaway/jest-location-mock/main?icon=github)](https://github.com/evelynhathaway/jest-location-mock/actions)
@@ -26,14 +26,15 @@ Or tried to mock `window.location` and gotten an error like this?
 TypeError: Cannot redefine property: location
 ```
 
-This Jest plugin fixes this error and mocks out `window.location` so it behaves similar to how does in the browser.
+This Jest/Vitest plugin fixes this error and mocks out `window.location` so it behaves similar to how does in the browser.
 
 ## Features
 
+- 🆕 **New in v3.2.0:** Compatibility with Vitest
 - 🆕 **New in v3.0.0:** Compatibility with JSDOM's `window.history` implementation and `react-router-dom` ([see limitations](#limitations))
 - 🆕 **New in v3.0.0:** Compatibility with JSDOM v21+'s unconfigurable / unforgeable `window.location`
-- 🎛️ Mocks and controls `window.location` in JSDOM Jest tests
-- 🕵️‍♀️ Includes Jest spies all of the methods on `window.location` and `window.history`
+- 🎛️ Mocks and controls `window.location` in JSDOM Jest/Vitest tests
+- 🕵️‍♀️ Includes Jest/Vitest spies all of the methods on `window.location` and `window.history`
 - ⚓ Supports using relative URLs so pathnames that work in the browser also work in JSDOM
 - 🔕 Prevents `console.error` messages from JSDOM when changing `window.location`
 - 🤐 Does not affect Jest environments without `window`, or in other words, it doesn't cause errors on mixed JSDOM / Node.js projects
@@ -50,6 +51,8 @@ To start using Jest Location Mock, importing the default export will add a `befo
 will mock `window.location` and watch `window.history`.
 
 ### Quick Start
+
+#### Quick Start – Jest
 
 **`jest.config.js`**
 
@@ -69,21 +72,31 @@ export default {
 import "jest-location-mock";
 ```
 
-### Other Setup Methods
+#### Quick Start – Vitest
 
-<details>
-<summary><strong>With Create React App (Easy)</strong></summary>
-
-Create React App (`react-scripts`) [automatically includes `setupFilesAfterEnv`](https://create-react-app.dev/docs/running-tests#initializing-test-environment) if it finds a setup tests file. Add the following to the file if it exists, or create a file. You do not need to modify a Jest config unless you've ejected from Create React App.
-
-**`src/setupTests.js`** or **`src/setupTests.ts`**
+**`vitest.config.js`**
 
 ```js
-// Mock `window.location` with Jest spies
-import "jest-location-mock";
+import {defineConfig} from "vitest/config";
+
+export default defineConfig({
+    test: {
+        // [other Vitest config properties...]
+        setupFiles: [
+            "./config/vitest-setup.js",
+        ],
+    },
+});
 ```
 
-</details>
+**`config/jest-setup.js`**
+
+```js
+// Mock `window.location` with Vitest spies
+import "jest-location-mock/vitest";
+```
+
+### Other Setup Methods
 
 <details>
 <summary><strong>Without a Setup File (Easy)</strong></summary>
@@ -99,6 +112,21 @@ export default {
         "jest-location-mock"
     ]
 };
+```
+
+**`vitest.config.js`**
+
+```js
+import {defineConfig} from "vitest/config";
+
+export default defineConfig({
+    test: {
+        // [other Vitest config properties...]
+        setupFiles: [
+            "jest-location-mock/vitest",
+        ],
+    },
+});
 ```
 
 </details>
@@ -133,6 +161,35 @@ import "jest-location-mock";
 </details>
 
 <details>
+<summary><strong>With TypeScript Vitest Files</strong></summary>
+
+Vitest setup and config files can be in TypeScript.
+
+**`vitest.config.ts`**
+
+```js
+import {defineConfig} from "vitest/config";
+
+export default defineConfig({
+    test: {
+        // [other Vitest config properties...]
+        setupFiles: [
+            "./config/vitest-setup.ts",
+        ],
+    },
+});
+```
+
+**`config/jest-setup.ts`**
+
+```js
+// Mock `window.location` with Vitest spies
+import "jest-location-mock/vitest";
+```
+
+</details>
+
+<details>
 <summary><strong>Changing the Starting Location</strong></summary>
 
 The starting location is `http://localhost/` by default. If `process.env.HOST` is set before the `beforeEach()` that creates the mock (e.g. a real environment variable or the value is set by JavaScript roughly right before each test is run), this value is used instead.
@@ -144,6 +201,18 @@ However, the most straightforward solution to changing the starting location is 
 ```js
 // Mock `window.location` with Jest spies
 import "jest-location-mock";
+
+beforeEach(() => {
+    window.location.href = "https://example.com";
+});
+```
+
+**`config/vitest-setup.ts`**
+
+```js
+import {beforeEach} from "vitest";
+// Mock `window.location` with Vitest spies
+import "jest-location-mock/vitest";
 
 beforeEach(() => {
     window.location.href = "https://example.com";
@@ -174,6 +243,7 @@ If you do not include the default import in the test environment setup file, you
 ```js
 // Mock `window.location` with Jest spies
 import "jest-location-mock";
+// or `import "jest-location-mock/vitest";` if using vitest
 
 // Example test that will pass once the mock is imported
 test("should not error when pressed", () => {
@@ -189,8 +259,8 @@ test("should not error when pressed", () => {
 <details>
 <summary><strong>Customizing the Behavior (Advanced)</strong></summary>
 
-If the default behavior of creating a `beforeAll()` and `beforeEach()` Jest hook that mocks the `window.location` and
-listens to methods on `window.history` doesn't work best for you, you may replace the default import with a custom
+If the default behavior of creating a `beforeAll()` and `beforeEach()` Jest/Vitest hook that mocks the `window.location`
+and listens to methods on `window.history` doesn't work best for you, you may replace the default import with a custom
 setup.
 
 **`config/jest-setup.js`**
@@ -200,6 +270,29 @@ setup.
 
 // You may import the functions that run inside the hook and craft your own logic
 import {replaceHistory, replaceLocation, reset} from "jest-location-mock/lib/hooks";
+
+// `beforeAll()` is used by default to setup the mock on the window
+beforeAll(() => {
+    // This is where the most of magic happens, you probably want to keep this
+    replaceLocation();
+    // New in v3.0.0, proxy and spy on `window.history` to support use cases like browser router from react-router-dom
+    // - Remove to isolate the `window.location` mock from `window.history`
+    replaceHistory();
+});
+// `beforeEach()` is used by default for a clean slate for each test
+beforeEach(() => {
+    reset();
+});
+```
+
+**`config/vitest-setup.ts`**
+
+```js
+import {beforeAll, beforeEach} from "vitest";
+// Remove: `import "jest-location-mock/vitest";`
+
+// You may import the functions that run inside the hook and craft your own logic
+import {replaceHistory, replaceLocation, reset} from "jest-location-mock/lib/hooks/vitest";
 
 // `beforeAll()` is used by default to setup the mock on the window
 beforeAll(() => {
@@ -229,11 +322,12 @@ beforeEach(() => {
   JSDOM's `window.history` still applies.
     - `window.history.back()`, `forward()`, and `go()` will not error, but they will not reflect any history traversal
       in `window.location` ([jsdom#1565](https://github.com/jsdom/jsdom/issues/1565))
-- **Relies on `window._globalProxy` from JSDOM:** This property has been available for years, but should it disappear in
-  a new JSDOM version, this project will stop working. Unfortunately between JSDOM making `window.location`
-  unconfigurable and not being open to an API for mocking purposes (since it's made for spec compliance, not testing
-  niches), there may not be a good workaround if it's removed. If you cannot update your tested code, this project aims
-  to be more stable than a [package patch](https://gist.github.com/cpojer/e66f9a082021a82230f2595a6027f161)
+- **Jest support relies on `window._globalProxy` from JSDOM:** This property has been available for years, but should it
+  disappear in a new JSDOM version, this project will stop working for Jest users. It should still work for Vitest
+  users. Unfortunately between JSDOM making `window.location` unconfigurable and not being open to an API for mocking
+  purposes (since it's made for spec compliance, not testing niches), there may not be a good workaround if it's
+  removed. If you cannot update your tested code, this project still aims to be more stable than a [package
+  patch](https://gist.github.com/cpojer/e66f9a082021a82230f2595a6027f161)
 
 ## License
 

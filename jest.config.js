@@ -3,11 +3,16 @@
 
 export default {
 	preset: "ts-jest",
+	testPathIgnorePatterns: [
+		String.raw`\.vitest\.test\.(ts|tsx|js|jsx)$`,
+		"/test-suites/",
+	],
 	clearMocks: true,
 	collectCoverage: true,
 	collectCoverageFrom: [
 		"src/**/*",
-		"!src/**/index.ts",
+		"!src/**/vitest.ts",
+		"!src/**/*.vitest.{ts,tsx,js,jsx}",
 		"!**/__tests__/**/*",
 	],
 	coverageThreshold: {

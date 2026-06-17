@@ -1,3 +1,3 @@
-export * from "./replace-location";
-export * from "./replace-history";
+export * from "./replace-location.jest";
+export * from "./replace-history.jest";
 export * from "./reset";

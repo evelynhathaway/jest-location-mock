@@ -1,7 +1,7 @@
 // Side effects
-import "./setup-hooks.jest";
+import "./setup-hooks.vitest";
 
 
 // Re-exports for additional configuration
 export * from "./utils";
-export * from "./hooks";
+export * from "./hooks/vitest";

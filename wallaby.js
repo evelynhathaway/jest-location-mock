@@ -1,6 +1,6 @@
 module.exports = function () {
 	return {
-		autoDetect: true,
+		autoDetect: ["vitest", "jest"],
 		hints: {
 			ignoreCoverageForFile: /ignore file coverage|istanbul ignore file/,
 		},
