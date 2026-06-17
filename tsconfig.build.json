@@ -1,0 +1,14 @@
+{
+	"extends": "./tsconfig.json",
+	"compilerOptions": {
+		"outDir": "dist/esm",
+		"noEmit": false,
+		"allowImportingTsExtensions": false,
+		"rewriteRelativeImportExtensions": true
+	},
+	"exclude": [
+		"**/*.test.*",
+		"config/",
+		"vitest.config.ts"
+	]
+}

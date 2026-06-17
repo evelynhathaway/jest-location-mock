@@ -1,13 +1,20 @@
+import {createDefaultEsmPreset} from "ts-jest";
+
 // For a detailed explanation regarding each configuration property, visit:
 // https://jestjs.io/docs/en/configuration.html
 
 export default {
-	preset: "ts-jest",
+	...createDefaultEsmPreset(),
+	testPathIgnorePatterns: [
+		String.raw`\.vitest\.test\.(ts|tsx|js|jsx)$`,
+		"/test-suites/",
+	],
 	clearMocks: true,
 	collectCoverage: true,
 	collectCoverageFrom: [
 		"src/**/*",
-		"!src/**/index.ts",
+		"!src/**/vitest.ts",
+		"!src/**/*.vitest.{ts,tsx,js,jsx}",
 		"!**/__tests__/**/*",
 	],
 	coverageThreshold: {

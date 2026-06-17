@@ -1,5 +1,5 @@
 // Default setup side-effects
-import "../src/index.ts";
+import "../src/vitest.ts";
 
 // Enable fetch mock for use in React Router tests
 // - Reference: https://reactrouter.com/en/main/routers/picking-a-router#testing
@@ -7,11 +7,11 @@ import "../src/index.ts";
 import "whatwg-fetch";
 
 // Add matchers from Testing Library
-import "@testing-library/jest-dom/jest-globals";
+import "@testing-library/jest-dom/vitest";
 
 import {TextDecoder, TextEncoder} from "node:util";
-import {afterEach} from "@jest/globals";
 import {cleanup} from "@testing-library/react";
+import {afterEach} from "vitest";
 
 // Enable Node.js Text Encoder and TextDecoder in JSDOM environment for React Router tests
 if (!globalThis.TextEncoder || !globalThis.TextDecoder) {
