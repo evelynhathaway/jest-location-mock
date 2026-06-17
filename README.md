@@ -89,7 +89,7 @@ export default defineConfig({
 });
 ```
 
-**`config/jest-setup.js`**
+**`config/vitest-setup.js`**
 
 ```js
 // Mock `window.location` with Vitest spies
@@ -180,7 +180,7 @@ export default defineConfig({
 });
 ```
 
-**`config/jest-setup.ts`**
+**`config/vitest-setup.ts`**
 
 ```js
 // Mock `window.location` with Vitest spies
