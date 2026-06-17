@@ -7,7 +7,7 @@ import {
 	beforeAll,
 	afterAll,
 } from "vitest";
-import {testSuite} from "./test-suites/location-mock-relative.test";
+import {testSuite} from "./test-suites/location-mock-relative.test.ts";
 
 testSuite({
 	describe,

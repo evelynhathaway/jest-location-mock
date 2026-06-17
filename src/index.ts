@@ -1,7 +1,6 @@
 // Side effects
-import "./setup-hooks.jest";
+import "./setup-hooks.jest.ts";
 
 
 // Re-exports for additional configuration
-export * from "./utils";
-export * from "./hooks";
+export * from "./hooks/jest.ts";

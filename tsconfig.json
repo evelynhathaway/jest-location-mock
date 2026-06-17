@@ -1,7 +1,7 @@
 {
 	"compilerOptions": {
-		"module": "CommonJS",
-		"target": "es6",
+		"module": "nodenext",
+		"target": "esnext",
 		"lib": [
 			"dom",
 			"esnext"
@@ -9,9 +9,12 @@
 		"strict": true,
 		"esModuleInterop": true,
 		"outDir": "lib",
-		"moduleResolution": "node",
+		"moduleResolution": "nodenext",
 		"declaration": true,
-		"jsx": "react"
+		"jsx": "react-jsx",
+		"isolatedModules": true,
+		"noEmit": true,
+		"allowImportingTsExtensions": true
 	},
 	"include": [
 		"src",

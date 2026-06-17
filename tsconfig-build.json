@@ -1,7 +1,16 @@
 {
 	"extends": "./tsconfig.json",
+	"compilerOptions": {
+		"noEmit": false,
+		"allowImportingTsExtensions": false,
+		"rewriteRelativeImportExtensions": true,
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"skipLibCheck": true
+	},
 	"exclude": [
 		"**/*.test.*",
-		"config/"
+		"config/",
+		"vitest.config.ts"
 	]
 }

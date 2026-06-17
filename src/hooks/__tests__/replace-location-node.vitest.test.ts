@@ -8,8 +8,8 @@ import {
 	beforeAll,
 	afterAll,
 } from "vitest";
-import {replaceLocation} from "../replace-location.vitest";
-import {testSuite} from "./test-suites/replace-location-node.test";
+import {replaceLocation} from "../replace-location.vitest.ts";
+import {testSuite} from "./test-suites/replace-location-node.test.ts";
 
 testSuite({
 	describe,

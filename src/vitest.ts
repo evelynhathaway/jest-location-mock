@@ -1,7 +1,6 @@
 // Side effects
-import "./setup-hooks.vitest";
+import "./setup-hooks.vitest.ts";
 
 
 // Re-exports for additional configuration
-export * from "./utils";
-export * from "./hooks/vitest";
+export * from "./hooks/vitest.ts";

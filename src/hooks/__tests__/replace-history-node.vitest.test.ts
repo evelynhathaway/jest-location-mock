@@ -8,8 +8,8 @@ import {
 	beforeAll,
 	afterAll,
 } from "vitest";
-import {replaceHistory} from "../replace-history.vitest";
-import {testSuite} from "./test-suites/replace-history-node.test";
+import {replaceHistory} from "../replace-history.vitest.ts";
+import {testSuite} from "./test-suites/replace-history-node.test.ts";
 
 testSuite({
 	describe,

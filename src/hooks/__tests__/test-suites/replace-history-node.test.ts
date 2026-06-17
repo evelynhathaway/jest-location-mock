@@ -1,5 +1,5 @@
-import type {TestRunnerDependencies} from "../../../../config/create-test-suite";
-import type {replaceHistory as replaceHistoryType} from "../../replace-history.jest";
+import type {TestRunnerDependencies} from "../../../../config/create-test-suite.ts";
+import type {replaceHistory as replaceHistoryType} from "../../replace-history.jest.ts";
 
 export const testSuite = ({
 	describe,

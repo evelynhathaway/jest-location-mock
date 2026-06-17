@@ -34,7 +34,7 @@
 		"lint": "eslint",
 		"prepare": "husky",
 		"test": "npm run test:jest && npm run test:vitest",
-		"test:jest": "jest",
+		"test:jest": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
 		"test:vitest": "vitest"
 	},
 	"commitlint": {

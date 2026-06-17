@@ -7,7 +7,7 @@ import {
 	beforeAll,
 	afterAll,
 } from "@jest/globals";
-import {testSuite} from "./test-suites/react-router-dom.test";
+import {testSuite} from "./test-suites/react-router-dom.test.tsx";
 
 testSuite({
 	describe,

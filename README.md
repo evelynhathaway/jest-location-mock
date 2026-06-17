@@ -269,7 +269,7 @@ setup.
 // Remove: `import "jest-location-mock";`
 
 // You may import the functions that run inside the hook and craft your own logic
-import {replaceHistory, replaceLocation, reset} from "jest-location-mock/lib/hooks";
+import {replaceHistory, replaceLocation, reset} from "jest-location-mock/lib/hooks/jest";
 
 // `beforeAll()` is used by default to setup the mock on the window
 beforeAll(() => {

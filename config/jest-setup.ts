@@ -1,5 +1,5 @@
 // Default setup side-effects
-import "../src";
+import "../src/index.ts";
 
 // Enable fetch mock for use in React Router tests
 // - Reference: https://reactrouter.com/en/main/routers/picking-a-router#testing

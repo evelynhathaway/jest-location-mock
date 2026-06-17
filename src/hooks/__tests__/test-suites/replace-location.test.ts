@@ -1,4 +1,4 @@
-import type {TestRunnerDependencies} from "../../../../config/create-test-suite";
+import type {TestRunnerDependencies} from "../../../../config/create-test-suite.ts";
 
 export const testSuite = ({
 	describe,

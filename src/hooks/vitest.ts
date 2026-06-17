@@ -1,3 +1,3 @@
-export * from "./replace-location.vitest";
-export * from "./replace-history.vitest";
-export * from "./reset";
+export * from "./replace-location.vitest.ts";
+export * from "./replace-history.vitest.ts";
+export * from "./reset.ts";

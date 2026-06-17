@@ -7,7 +7,7 @@ import {
 	beforeAll,
 	afterAll,
 } from "vitest";
-import {testSuite} from "./test-suites/spies.test";
+import {testSuite} from "./test-suites/spies.test.ts";
 
 testSuite({
 	describe,

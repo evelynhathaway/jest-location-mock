@@ -1,5 +1,5 @@
-import {LocationMockRelative, makeAbsolute} from "../utils";
-import {getHost} from "../utils/get-host";
+import {getHost} from "../utils/get-host.ts";
+import {LocationMockRelative, makeAbsolute} from "../utils/location-mock-relative.ts";
 
 export const originalLocationRef: {current: Location | null} = {current: null};
 

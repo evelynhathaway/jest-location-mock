@@ -1,4 +1,4 @@
-import {originalLocationRef} from "./replace-location";
+import {originalLocationRef} from "./replace-location.ts";
 
 export const replaceHistory = (spyOn: (object: unknown, method: string) => {mockName: (name: string) => void}): void => {
 	// Do nothing if window is not defined

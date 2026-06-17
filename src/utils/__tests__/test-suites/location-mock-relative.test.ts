@@ -1,5 +1,5 @@
-import {LocationMockRelative} from "../..";
-import type {TestRunnerDependencies} from "../../../../config/create-test-suite";
+import type {TestRunnerDependencies} from "../../../../config/create-test-suite.ts";
+import {LocationMockRelative} from "../../location-mock-relative.ts";
 
 export const testSuite = ({
 	describe,

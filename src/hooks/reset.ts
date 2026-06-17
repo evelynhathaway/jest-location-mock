@@ -1,4 +1,4 @@
-import {getHost} from "../utils/get-host";
+import {getHost} from "../utils/get-host.ts";
 
 export const reset = (): void => {
 	// Do nothing if window is not defined

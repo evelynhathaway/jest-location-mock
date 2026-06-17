@@ -8,8 +8,8 @@ import {
 	beforeAll,
 	afterAll,
 } from "vitest";
-import {replaceLocation} from "../replace-location.vitest";
-import {testSuite} from "./test-suites/replace-location-missing-global-proxy.test";
+import {replaceLocation} from "../replace-location.vitest.ts";
+import {testSuite} from "./test-suites/replace-location-missing-global-proxy.test.ts";
 
 testSuite({
 	describe,

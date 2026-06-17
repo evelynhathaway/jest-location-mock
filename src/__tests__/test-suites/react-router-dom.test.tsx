@@ -1,4 +1,3 @@
-import React from "react";
 import {screen, render, act} from "@testing-library/react";
 import {
 	BrowserRouter,
@@ -9,7 +8,7 @@ import {
 	Route,
 	Link,
 } from "react-router-dom";
-import type {TestRunnerDependencies} from "../../../config/create-test-suite";
+import type {TestRunnerDependencies} from "../../../config/create-test-suite.ts";
 
 export const testSuite = ({
 	describe,

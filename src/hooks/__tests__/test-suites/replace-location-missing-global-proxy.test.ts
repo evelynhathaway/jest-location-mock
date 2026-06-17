@@ -1,5 +1,5 @@
-import type {TestRunnerDependencies} from "../../../../config/create-test-suite";
-import type {replaceLocation as replaceLocationType} from "../../replace-location.jest";
+import type {TestRunnerDependencies} from "../../../../config/create-test-suite.ts";
+import type {replaceLocation as replaceLocationType} from "../../replace-location.jest.ts";
 
 export const testSuite = ({
 	describe,
